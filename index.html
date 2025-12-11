@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Vocabulary Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #4F46E5; --bg: #F3F4F6; --card-bg: #FFFFFF; --text-main: #1F2937; --text-sub: #6B7280; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); margin: 0; padding: 2rem; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 3rem; }
+        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; border: 1px solid transparent; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-color: var(--primary); }
+        .card-tag { background-color: #EEF2FF; color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; align-self: flex-start; margin-bottom: 1rem; text-transform: uppercase; }
+        .card-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .card-desc { font-size: 0.9rem; color: var(--text-sub); margin-bottom: 1.5rem; }
+        .card-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-sub); }
+        .status-ready { color: #059669; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>English Master</h1>
+            <p>Lộ trình học từ vựng TOEIC - Full 30 Days</p>
+        </header>
+        <div class="grid">
+            <a href="d1.html" class="card"><span class="card-tag">Day 01</span><div class="card-title">Tuyển dụng</div><div class="card-desc">Résumé, Interview...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d2.html" class="card"><span class="card-tag">Day 02</span><div class="card-title">Phép tắc - Quy định</div><div class="card-desc">Rules, Regulations...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d3.html" class="card"><span class="card-tag">Day 03</span><div class="card-title">Công việc văn phòng (1)</div><div class="card-desc">Meetings, Schedule...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d4.html" class="card"><span class="card-tag">Day 04</span><div class="card-title">Công việc văn phòng (2)</div><div class="card-desc">Planning, Assign...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d5.html" class="card"><span class="card-tag">Day 05</span><div class="card-title">Công việc văn phòng (3)</div><div class="card-desc">Technology...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d6.html" class="card"><span class="card-tag">Day 06</span><div class="card-title">Thời gian rảnh</div><div class="card-desc">Events, Museums...</div><div class="card-footer"><span>42+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d7.html" class="card"><span class="card-tag">Day 07</span><div class="card-title">Marketing (1)</div><div class="card-desc">Strategy, Research...</div><div class="card-footer"><span>39+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d8.html" class="card"><span class="card-tag">Day 08</span><div class="card-title">Marketing (2)</div><div class="card-desc">Advertising...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d9.html" class="card"><span class="card-tag">Day 09</span><div class="card-title">Kinh tế</div><div class="card-desc">Economy, Growth...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d10.html" class="card"><span class="card-tag">Day 10</span><div class="card-title">Mua sắm</div><div class="card-desc">Purchase, Refund...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d11.html" class="card"><span class="card-tag">Day 11</span><div class="card-title">Phát triển sản phẩm</div><div class="card-desc">Research, Features...</div><div class="card-footer"><span>44+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d12.html" class="card"><span class="card-tag">Day 12</span><div class="card-title">Sản xuất</div><div class="card-desc">Equipment, Assembly...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d13.html" class="card"><span class="card-tag">Day 13</span><div class="card-title">Dịch vụ khách hàng</div><div class="card-desc">Complaint, Satisfaction...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d14.html" class="card"><span class="card-tag">Day 14</span><div class="card-title">Du lịch - Sân bay</div><div class="card-desc">Travel, Flight...</div><div class="card-footer"><span>41+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d15.html" class="card"><span class="card-tag">Day 15</span><div class="card-title">Hợp đồng</div><div class="card-desc">Agreement, Contract...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d16.html" class="card"><span class="card-tag">Day 16</span><div class="card-title">Giao dịch</div><div class="card-desc">Trade, Dealer...</div><div class="card-footer"><span>41+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d17.html" class="card"><span class="card-tag">Day 17</span><div class="card-title">Thương mại - Vận chuyển</div><div class="card-desc">Shipping, Cargo...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d18.html" class="card"><span class="card-tag">Day 18</span><div class="card-title">Nơi lưu trú - Nhà hàng</div><div class="card-desc">Hotel, Reservation...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d19.html" class="card"><span class="card-tag">Day 19</span><div class="card-title">Doanh thu</div><div class="card-desc">Revenue, Profit...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d20.html" class="card"><span class="card-tag">Day 20</span><div class="card-title">Kế toán</div><div class="card-desc">Audit, Budget...</div><div class="card-footer"><span>42+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d21.html" class="card"><span class="card-tag">Day 21</span><div class="card-title">Xu hướng doanh nghiệp</div><div class="card-desc">Merger, Expansion...</div><div class="card-footer"><span>42+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d22.html" class="card"><span class="card-tag">Day 22</span><div class="card-title">Hội họp</div><div class="card-desc">Agenda, Convene...</div><div class="card-footer"><span>43+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d23.html" class="card"><span class="card-tag">Day 23</span><div class="card-title">Phúc lợi của nhân viên</div><div class="card-desc">Benefits, Bonus...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d24.html" class="card"><span class="card-tag">Day 24</span><div class="card-title">Luân chuyển nhân sự</div><div class="card-desc">Promotion, Appoint...</div><div class="card-footer"><span>41+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d25.html" class="card"><span class="card-tag">Day 25</span><div class="card-title">Giao thông</div><div class="card-desc">Congestion, Detour...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d26.html" class="card"><span class="card-tag">Day 26</span><div class="card-title">Ngân hàng</div><div class="card-desc">Account, Loan...</div><div class="card-footer"><span>43+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d27.html" class="card"><span class="card-tag">Day 27</span><div class="card-title">Đầu tư</div><div class="card-desc">Investment, Stock...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d28.html" class="card"><span class="card-tag">Day 28</span><div class="card-title">Tòa nhà - Nhà</div><div class="card-desc">Construction, Renovation...</div><div class="card-footer"><span>40+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            <a href="d29.html" class="card"><span class="card-tag">Day 29</span><div class="card-title">Môi trường</div><div class="card-desc">Pollution, Weather...</div><div class="card-footer"><span>43+ Từ</span><span class="status-ready">Học ngay &rarr;</span></div></a>
+            
+            <!-- NEW DAYS -->
+            <a href="d30.html" class="card">
+                <span class="card-tag">Day 30</span>
+                <div class="card-title">Sức khỏe</div>
+                <div class="card-desc">Symptoms, Diagnosis, Treatment, Insurance...</div>
+                <div class="card-footer"><span>41+ Từ chính</span><span class="status-ready">Học ngay &rarr;</span></div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
