@@ -48,233 +48,1528 @@
         </div>
     </div>
     <script>
-        const vocabularyList = [
-            // --- MAIN WORDS ---
-            { word: "Sophisticated", ipa: "/səˈfɪs.tə.keɪ.t̬ɪd/", type: "adj", meaning: "Tinh vi, phức tạp, tinh tế", example: "A sophisticated surveillance system." },
-            { word: "Sophistication", ipa: "/səˌfɪs.təˈkeɪ.ʃən/", type: "n (der)", meaning: "Sự tinh tế", example: "" },
-            { word: "Complex", ipa: "/kəmˈpleks/", type: "adj (syn)", meaning: "Phức tạp", example: "" },
-            { word: "Refined", ipa: "/rɪˈfaɪnd/", type: "adj (syn)", meaning: "Tinh xảo, công phu", example: "" },
-            { word: "Timely", ipa: "/ˈtaɪm.li/", type: "adj", meaning: "Kịp thời", example: "Completed in a timely manner." },
-            { word: "Realistically", ipa: "/ˌriː.əˈlɪs.tɪ.kəl.i/", type: "adv", meaning: "Theo thực tế", example: "We cannot realistically expect it." },
-            { word: "Realistic", ipa: "/ˌriː.əˈlɪs.tɪk/", type: "adj (der)", meaning: "Thực tế", example: "" },
-            { word: "Realism", ipa: "/ˈriː.ə.lɪ.zəm/", type: "n (der)", meaning: "Chủ nghĩa hiện thực", example: "" },
-            { word: "Promptly", ipa: "/ˈprɑːmpt.li/", type: "adv", meaning: "Nhanh chóng, ngay lập tức, đúng giờ", example: "Respond promptly to all inquiries." },
-            { word: "Prompt", ipa: "/prɑːmpt/", type: "adj (der)", meaning: "Nhanh chóng", example: "" },
-            { word: "Immediately", ipa: "/ɪˈmiː.di.ət.li/", type: "adv (syn)", meaning: "Ngay lập tức", example: "" },
-            { word: "Instantly", ipa: "/ˈɪn.stənt.li/", type: "adv (syn)", meaning: "Ngay tức khắc", example: "" },
-            { word: "Accessible", ipa: "/əkˈses.ə.bəl/", type: "adj", meaning: "Có thể truy cập/sử dụng", example: "Only accessible to executive staff." },
-            { word: "Access", ipa: "/ˈæk.ses/", type: "v (der)", meaning: "Truy cập", example: "" },
-            { word: "Accessibility", ipa: "/əkˌses.əˈbɪl.ə.t̬i/", type: "n (der)", meaning: "Khả năng truy cập", example: "" },
-            { word: "Implement", ipa: "/ˈɪm.plə.ment/", type: "v", meaning: "Thi hành, thực hiện", example: "Implement a marketing campaign." },
-            { word: "Implementation", ipa: "/ˌɪm.plə.menˈteɪ.ʃən/", type: "n (der)", meaning: "Sự thi hành", example: "" },
-            { word: "Execute", ipa: "/ˈek.sə.kjuːt/", type: "v (syn)", meaning: "Thực hiện", example: "" },
-            { word: "Feedback", ipa: "/ˈfiːd.bæk/", type: "n", meaning: "Phản hồi, ý kiến", example: "Feedback from colleagues." },
-            { word: "Outstanding", ipa: "/ˌaʊtˈstæn.dɪŋ/", type: "adj", meaning: "Nổi bật / Chưa thanh toán", example: "An outstanding business plan." },
-            { word: "Exceptional", ipa: "/ɪkˈsep.ʃən.əl/", type: "adj (syn)", meaning: "Xuất sắc", example: "" },
-            { word: "Overdue", ipa: "/ˌoʊ.vɚˈduː/", type: "adj (syn)", meaning: "Quá hạn", example: "" },
-            { word: "Unpaid", ipa: "/ʌnˈpeɪd/", type: "adj (syn)", meaning: "Chưa thanh toán", example: "" },
-            { word: "Inform", ipa: "/ɪnˈfɔːrm/", type: "v", meaning: "Thông báo", example: "Please inform the director." },
-            { word: "Information", ipa: "/ˌɪn.fɚˈmeɪ.ʃən/", type: "n (der)", meaning: "Thông tin", example: "" },
-            { word: "Informative", ipa: "/ɪnˈfɔːr.mə.t̬ɪv/", type: "adj (der)", meaning: "Nhiều thông tin", example: "" },
-            { word: "Replacement", ipa: "/rɪˈpleɪs.mənt/", type: "n", meaning: "Sự thay thế, người thay thế", example: "Need a replacement for this laptop." },
-            { word: "Announcement", ipa: "/əˈnaʊns.mənt/", type: "n", meaning: "Thông báo", example: "Posted an announcement." },
-            { word: "Announce", ipa: "/əˈnaʊns/", type: "v (der)", meaning: "Thông báo", example: "" },
-            { word: "Department", ipa: "/dɪˈpɑːrt.mənt/", type: "n", meaning: "Phòng ban, bộ phận", example: "Report to the finance department." },
-            { word: "Permanently", ipa: "/ˈpɝː.mə.nənt.li/", type: "adv", meaning: "Vĩnh viễn", example: "Files permanently deleted." },
-            { word: "Indefinitely", ipa: "/ɪnˈdef.ən.ət.li/", type: "adv (syn)", meaning: "Vô thời hạn", example: "" },
-            { word: "Fulfill", ipa: "/fʊlˈfɪl/", type: "v", meaning: "Hoàn thành, đáp ứng", example: "Fulfilled the terms of the contract." },
-            { word: "Fulfillment", ipa: "/fʊlˈfɪl.mənt/", type: "n (der)", meaning: "Sự hoàn thành", example: "" },
-            { word: "Meet", ipa: "/miːt/", type: "v (syn)", meaning: "Đáp ứng", example: "" },
-            { word: "Outline", ipa: "/ˈaʊt.laɪn/", type: "n", meaning: "Dàn bài, phác thảo", example: "Arranging ideas in an outline." },
-            { word: "Outline", ipa: "/ˈaʊt.laɪn/", type: "v", meaning: "Vạch ra, phác thảo", example: "Outlined the features." },
-            { word: "Explain", ipa: "/ɪkˈspleɪn/", type: "v", meaning: "Giải thích", example: "Explained the new regulations." },
-            { word: "Explanation", ipa: "/ˌek.spləˈneɪ.ʃən/", type: "n (der)", meaning: "Sự giải thích", example: "" },
-            { word: "Contain", ipa: "/kənˈteɪn/", type: "v", meaning: "Chứa đựng, bao gồm", example: "Cabinet contains copies." },
-            { word: "Include", ipa: "/ɪnˈkluːd/", type: "v (syn)", meaning: "Bao gồm", example: "" },
-            { word: "Compile", ipa: "/kəmˈpaɪl/", type: "v", meaning: "Biên soạn, tổng hợp", example: "Compile a list." },
-            { word: "Subsequent", ipa: "/ˈsʌb.sɪ.kwənt/", type: "adj", meaning: "Đến sau, theo sau", example: "Subsequent to the closing." },
-            { word: "Overview", ipa: "/ˈoʊ.vɚ.vjuː/", type: "n", meaning: "Tổng quan", example: "Gave an overview of the topic." },
-            { word: "Provider", ipa: "/prəˈvaɪ.dɚ/", type: "n", meaning: "Nhà cung cấp", example: "Internet provider." },
-            { word: "Matter", ipa: "/ˈmæt̬.ɚ/", type: "n", meaning: "Vấn đề", example: "Deal with personal matters." },
-            { word: "Matter", ipa: "/ˈmæt̬.ɚ/", type: "v", meaning: "Quan trọng", example: "" },
-            { word: "Expertise", ipa: "/ˌek.spɝːˈtiːz/", type: "n", meaning: "Chuyên môn", example: "Area of expertise." },
-            { word: "Expert", ipa: "/ˈek.spɝːt/", type: "n (der)", meaning: "Chuyên gia", example: "" },
-            { word: "Demonstrate", ipa: "/ˈdem.ən.streɪt/", type: "v", meaning: "Chứng minh, minh họa", example: "Sales figures demonstrate success." },
-            { word: "Demonstration", ipa: "/ˌdem.ənˈstreɪ.ʃən/", type: "n (der)", meaning: "Sự chứng minh", example: "" },
-            { word: "Prove", ipa: "/pruːv/", type: "v (syn)", meaning: "Chứng minh", example: "" },
-            { word: "Remainder", ipa: "/rɪˈmeɪn.dɚ/", type: "n", meaning: "Phần còn lại", example: "Remainder of the month." },
-            { word: "Remain", ipa: "/rɪˈmeɪn/", type: "v (der)", meaning: "Còn lại", example: "" },
-            { word: "Remaining", ipa: "/rɪˈmeɪ.nɪŋ/", type: "adj (der)", meaning: "Còn lại", example: "" },
-            { word: "Balance", ipa: "/ˈbæl.əns/", type: "n (syn)", meaning: "Số dư", example: "" },
-            { word: "Essential", ipa: "/ɪˈsen.ʃəl/", type: "adj", meaning: "Thiết yếu", example: "Essential to success." },
-            { word: "Divide", ipa: "/dɪˈvaɪd/", type: "v", meaning: "Phân chia", example: "Divided equally." },
-            { word: "Division", ipa: "/dɪˈvɪʒ.ən/", type: "n (der)", meaning: "Sự phân chia", example: "" },
-            { word: "Dividend", ipa: "/ˈdɪv.ə.dend/", type: "n (der)", meaning: "Cổ tức", example: "" },
-            { word: "Break up", ipa: "", type: "phr (syn)", meaning: "Chia ra", example: "" },
-            { word: "Major", ipa: "/ˈmeɪ.dʒɚ/", type: "adj", meaning: "Chính, chủ yếu", example: "A major figure." },
-            { word: "Compliance", ipa: "/kəmˈplaɪ.əns/", type: "n", meaning: "Sự tuân thủ", example: "Compliance with guidelines." },
-            { word: "Comply", ipa: "/kəmˈplaɪ/", type: "v (der)", meaning: "Tuân theo", example: "" },
-            { word: "Clarify", ipa: "/ˈkler.ə.faɪ/", type: "v", meaning: "Làm rõ", example: "Clarified some details." },
-            { word: "Clarification", ipa: "/ˌkler.ə.fəˈkeɪ.ʃən/", type: "n (der)", meaning: "Sự làm rõ", example: "" },
-            { word: "Face", ipa: "/feɪs/", type: "v", meaning: "Đối mặt", example: "Faced with the challenge." },
-            { word: "Confront", ipa: "/kənˈfrʌnt/", type: "v (syn)", meaning: "Đương đầu", example: "" },
-            { word: "Follow", ipa: "/ˈfɑː.loʊ/", type: "v", meaning: "Theo sau, làm theo, hiểu", example: "Followed the guide." },
-            { word: "Following", ipa: "/ˈfɑː.loʊ.ɪŋ/", type: "prep/adj (der)", meaning: "Sau đây / Tiếp theo", example: "" },
-            { word: "Monitor", ipa: "/ˈmɑː.nə.t̬ɚ/", type: "v (syn)", meaning: "Theo dõi", example: "" },
-            { word: "Pay attention to", ipa: "", type: "phr (syn)", meaning: "Chú ý đến", example: "" },
-            { word: "Aspect", ipa: "/ˈæs.pekt/", type: "n", meaning: "Khía cạnh", example: "Every aspect of the problem." },
-            { word: "Apparently", ipa: "/əˈper.ənt.li/", type: "adv", meaning: "Hình như, có vẻ", example: "Apparently not invited." },
-            { word: "Seemingly", ipa: "/ˈsiː.mɪŋ.li/", type: "adv (syn)", meaning: "Có vẻ", example: "" },
-            { word: "Aware", ipa: "/əˈwer/", type: "adj", meaning: "Nhận thức, biết", example: "Made aware of safety procedures." },
-            { word: "Awareness", ipa: "/əˈwer.nəs/", type: "n (der)", meaning: "Sự nhận thức", example: "" },
-            { word: "Extended", ipa: "/ɪkˈsten.dɪd/", type: "adj", meaning: "Mở rộng, kéo dài", example: "Extended hours." },
-            { word: "Extend", ipa: "/ɪkˈstend/", type: "v (der)", meaning: "Mở rộng", example: "" },
-            { word: "Extension", ipa: "/ɪkˈsten.ʃən/", type: "n (der)", meaning: "Sự gia hạn", example: "" },
-            { word: "Accidentally", ipa: "/ˌæk.səˈden.t̬əl.i/", type: "adv", meaning: "Vô tình", example: "Accidentally made errors." },
-            { word: "Accident", ipa: "/ˈæk.sə.dənt/", type: "n (der)", meaning: "Tai nạn", example: "" },
-            { word: "Accidental", ipa: "/ˌæk.səˈden.t̬əl/", type: "adj (der)", meaning: "Tình cờ", example: "" },
-            { word: "Deliberately", ipa: "/dɪˈlɪb.ɚ.ət.li/", type: "adv (ant)", meaning: "Cố ý", example: "" },
-            { word: "Advisable", ipa: "/ədˈvaɪ.zə.bəl/", type: "adj", meaning: "Nên làm, thích hợp", example: "It is advisable to update." },
-            { word: "Advise", ipa: "/ədˈvaɪz/", type: "v (der)", meaning: "Khuyên", example: "" },
-            { word: "Advice", ipa: "/ədˈvaɪs/", type: "n (der)", meaning: "Lời khuyên", example: "" },
-            { word: "Concerned", ipa: "/kənˈsɝːnd/", type: "adj", meaning: "Lo lắng / Có liên quan", example: "Concerned about security." },
-            { word: "Concern", ipa: "/kənˈsɝːn/", type: "n/v (der)", meaning: "Mối quan tâm / Lo lắng", example: "" },
-            { word: "Speak", ipa: "/spiːk/", type: "v", meaning: "Nói", example: "Spoke to his clients." },
-
-            // --- BASIC / EXTRAS ---
-            { word: "Briefcase", ipa: "/ˈbriːf.keɪs/", type: "n", meaning: "Cặp đựng tài liệu", example: "" },
-            { word: "Business trip", ipa: "", type: "phr", meaning: "Chuyến công tác", example: "" },
-            { word: "Come over", ipa: "", type: "phr", meaning: "Ghé qua", example: "" },
-            { word: "Counter", ipa: "/ˈkaʊn.t̬ɚ/", type: "n", meaning: "Quầy", example: "" },
-            { word: "E-mail", ipa: "/ˈiː.meɪl/", type: "n/v", meaning: "Thư điện tử", example: "" },
-            { word: "Filing cabinet", ipa: "", type: "phr", meaning: "Tủ hồ sơ", example: "" },
-            { word: "Folder", ipa: "/ˈfoʊl.dɚ/", type: "n", meaning: "Bìa kẹp hồ sơ", example: "" },
-            { word: "Headache", ipa: "/ˈhed.eɪk/", type: "n", meaning: "Đau đầu", example: "" },
-            { word: "Internship", ipa: "/ˈɪn.tɝːn.ʃɪp/", type: "n", meaning: "Kỳ thực tập", example: "" },
-            { word: "Redo", ipa: "/ˌriːˈduː/", type: "v", meaning: "Làm lại", example: "" },
-            { word: "Routine", ipa: "/ruːˈtiːn/", type: "n/adj", meaning: "Thói quen / Thường lệ", example: "" },
-            { word: "Table lamp", ipa: "", type: "phr", meaning: "Đèn bàn", example: "" },
-            { word: "Thanks to", ipa: "", type: "phr", meaning: "Nhờ có", example: "" },
-            { word: "Timetable", ipa: "/ˈtaɪmˌteɪ.bəl/", type: "n", meaning: "Thời gian biểu", example: "" },
-            { word: "Window display", ipa: "", type: "phr", meaning: "Cửa sổ trưng bày", example: "" },
-            { word: "Chief", ipa: "/tʃiːf/", type: "n/adj", meaning: "Người đứng đầu / Trọng yếu", example: "" },
-            { word: "Conceal", ipa: "/kənˈsiːl/", type: "v", meaning: "Che giấu", example: "" },
-            { word: "Correct", ipa: "/kəˈrekt/", type: "adj/v", meaning: "Đúng / Sửa chữa", example: "" },
-            { word: "Economic", ipa: "/iː.kəˈnɑː.mɪk/", type: "adj", meaning: "Thuộc kinh tế", example: "" },
-            { word: "Embrace", ipa: "/ɪmˈbreɪs/", type: "v", meaning: "Đón nhận, ôm", example: "" },
-            { word: "Expected", ipa: "/ɪkˈspek.tɪd/", type: "adj", meaning: "Được mong đợi", example: "" },
-            { word: "Forum", ipa: "/ˈfɔːr.əm/", type: "n", meaning: "Diễn đàn", example: "" },
-            { word: "Instead of", ipa: "", type: "phr", meaning: "Thay vì", example: "" },
-            { word: "Mission", ipa: "/ˈmɪʃ.ən/", type: "n", meaning: "Sứ mệnh, nhiệm vụ", example: "" },
-            { word: "Programming", ipa: "/ˈproʊ.ɡræm.ɪŋ/", type: "n", meaning: "Lập trình", example: "" },
-            { word: "Remaining", ipa: "/rɪˈmeɪ.nɪŋ/", type: "adj", meaning: "Còn lại", example: "" },
-            { word: "Rush", ipa: "/rʌʃ/", type: "v", meaning: "Vội vã, đổ xô", example: "" },
-            { word: "Unfortunately", ipa: "/ʌnˈfɔːr.tʃən.ət.li/", type: "adv", meaning: "Thật không may", example: "" },
-            
-            // --- 800 WORDS ---
-            { word: "Archive", ipa: "/ˈɑːr.kaɪv/", type: "n", meaning: "Kho lưu trữ", example: "" },
-            { word: "Be unwilling to", ipa: "", type: "phr", meaning: "Không sẵn lòng", example: "" },
-            { word: "Be up late", ipa: "", type: "phr", meaning: "Thức khuya", example: "" },
-            { word: "Blackout", ipa: "/ˈblæk.aʊt/", type: "n", meaning: "Mất điện", example: "" },
-            { word: "Board meeting", ipa: "", type: "phr", meaning: "Họp hội đồng quản trị", example: "" },
-            { word: "Board of directors", ipa: "", type: "phr", meaning: "Hội đồng quản trị", example: "" },
-            { word: "Cross one's arms", ipa: "", type: "phr", meaning: "Khoanh tay", example: "" },
-            { word: "Depressing", ipa: "/dɪˈpres.ɪŋ/", type: "adj", meaning: "Gây chán nản", example: "" },
-            { word: "Drag", ipa: "/dræɡ/", type: "v", meaning: "Kéo lê", example: "" },
-            { word: "Fold in half", ipa: "", type: "phr", meaning: "Gấp đôi", example: "" },
-            { word: "Fold up", ipa: "", type: "phr", meaning: "Gấp lại", example: "" },
-            { word: "Frighten", ipa: "/ˈfraɪ.tən/", type: "v", meaning: "Làm hoảng sợ", example: "" },
-            { word: "Keep going", ipa: "", type: "phr", meaning: "Tiếp tục", example: "" },
-            { word: "Long-term", ipa: "", type: "adj", meaning: "Dài hạn", example: "" },
-            { word: "Look up", ipa: "", type: "phr", meaning: "Tra cứu", example: "" },
-            { word: "Look up to", ipa: "", type: "phr", meaning: "Kính trọng", example: "" },
-            { word: "Make a presentation", ipa: "", type: "phr", meaning: "Thuyết trình", example: "" },
-            { word: "Make a revision", ipa: "", type: "phr", meaning: "Sửa đổi", example: "" },
-            { word: "Make an error", ipa: "", type: "phr", meaning: "Mắc lỗi", example: "" },
-            { word: "Meet the deadline", ipa: "", type: "phr", meaning: "Kịp thời hạn", example: "" },
-            { word: "Meet requirements", ipa: "", type: "phr", meaning: "Đáp ứng yêu cầu", example: "" },
-            { word: "Mess up", ipa: "", type: "phr", meaning: "Làm lộn xộn / Hỏng việc", example: "" },
-            { word: "Schedule doesn't permit", ipa: "", type: "phr", meaning: "Lịch trình không cho phép", example: "" },
-            { word: "Obvious", ipa: "/ˈɑːb.vi.əs/", type: "adj", meaning: "Rõ ràng", example: "" },
-            { word: "Office supplies", ipa: "", type: "phr", meaning: "Văn phòng phẩm", example: "" },
-            { word: "Overlook", ipa: "/ˌoʊ.vɚˈlʊk/", type: "v", meaning: "Bỏ qua / Nhìn ra", example: "" },
-            { word: "Overnight", ipa: "/ˌoʊ.vɚˈnaɪt/", type: "adv", meaning: "Qua đêm", example: "" },
-            { word: "Papers", ipa: "", type: "n", meaning: "Giấy tờ", example: "" },
-            { word: "Proofread", ipa: "/ˈpruːf.riːd/", type: "v", meaning: "Đọc soát lỗi", example: "" },
-            { word: "Rearrange", ipa: "/ˌriː.əˈreɪndʒ/", type: "v", meaning: "Sắp xếp lại", example: "" },
-            { word: "Recondition", ipa: "/ˌriː.kənˈdɪʃ.ən/", type: "v", meaning: "Tân trang, sửa chữa", example: "" },
-            { word: "Rest chin on hand", ipa: "", type: "phr", meaning: "Chống cằm", example: "" },
-            { word: "Stool", ipa: "/stuːl/", type: "n", meaning: "Ghế đẩu", example: "" },
-            { word: "Timecard", ipa: "/ˈtaɪm.kɑːrd/", type: "n", meaning: "Thẻ chấm công", example: "" },
-            { word: "Wipe", ipa: "/waɪp/", type: "v", meaning: "Lau chùi", example: "" },
-            { word: "Work additional hours", ipa: "", type: "phr", meaning: "Làm thêm giờ", example: "" },
-            { word: "Work shift", ipa: "", type: "phr", meaning: "Ca làm việc", example: "" },
-            { word: "Burdensome", ipa: "/ˈbɝː.dən.səm/", type: "adj", meaning: "Nặng nề, phiền toái", example: "" },
-            { word: "Circulate", ipa: "/ˈsɝː.kjə.leɪt/", type: "v", meaning: "Lưu thông / Truyền bá", example: "" },
-            { word: "Commend", ipa: "/kəˈmend/", type: "v", meaning: "Khen ngợi", example: "" },
-            { word: "Company", ipa: "/ˈkʌm.pə.ni/", type: "n", meaning: "Công ty / Sự đi cùng", example: "" },
-            { word: "Discourage", ipa: "/dɪˈskɝː.ɪdʒ/", type: "v", meaning: "Làm nản lòng", example: "" },
-            { word: "Distraction", ipa: "/dɪˈstræk.ʃən/", type: "n", meaning: "Sự sao nhãng", example: "" },
-            { word: "Failure", ipa: "/ˈfeɪ.ljɚ/", type: "n", meaning: "Sự thất bại", example: "" },
-            { word: "Followed by", ipa: "", type: "phr", meaning: "Theo sau bởi", example: "" },
-            { word: "Interruption", ipa: "/ˌɪn.t̬əˈrʌp.ʃən/", type: "n", meaning: "Sự gián đoạn", example: "" },
-            { word: "Make sure", ipa: "", type: "phr", meaning: "Đảm bảo", example: "" },
-            { word: "Mislabeled", ipa: "", type: "adj", meaning: "Dán nhãn sai", example: "" },
-            { word: "Observant", ipa: "/əbˈzɝː.vənt/", type: "adj", meaning: "Tinh mắt", example: "" },
-            { word: "Persuade", ipa: "/pɚˈsweɪd/", type: "v", meaning: "Thuyết phục", example: "" },
-            { word: "Proposed", ipa: "/prəˈpoʊzd/", type: "adj", meaning: "Được đề xuất", example: "" },
-            { word: "Rephrase", ipa: "/ˌriːˈfreɪz/", type: "v", meaning: "Diễn đạt lại", example: "" },
-            { word: "Concisely", ipa: "/kənˈsaɪs.li/", type: "adv", meaning: "Ngắn gọn", example: "" },
-            { word: "Disapproval", ipa: "/ˌdɪs.əˈpruː.vəl/", type: "n", meaning: "Sự phản đối", example: "" },
-            { word: "Disapprove", ipa: "/ˌdɪs.əˈpruːv/", type: "v", meaning: "Không tán thành", example: "" },
-            { word: "Do a favor", ipa: "", type: "phr", meaning: "Giúp đỡ", example: "" },
-            { word: "Do a good job", ipa: "", type: "phr", meaning: "Làm tốt", example: "" },
-            { word: "Draw a distinction", ipa: "", type: "phr", meaning: "Chỉ ra sự khác biệt", example: "" },
-            { word: "Exposed", ipa: "/ɪkˈspoʊzd/", type: "adj", meaning: "Bị phơi bày", example: "" },
-            { word: "Intensive", ipa: "/ɪnˈten.sɪv/", type: "adj", meaning: "Chuyên sâu", example: "" },
-            { word: "Problematic", ipa: "/ˌprɑː.bləˈmæt̬.ɪk/", type: "adj", meaning: "Có vấn đề / Khó giải quyết", example: "" },
-            { word: "Project coordinator", ipa: "", type: "phr", meaning: "Điều phối viên dự án", example: "" },
-            { word: "Project management", ipa: "", type: "phr", meaning: "Quản lý dự án", example: "" },
-            { word: "Seating capacity", ipa: "", type: "phr", meaning: "Sức chứa chỗ ngồi", example: "" },
-            { word: "Take care of", ipa: "", type: "phr", meaning: "Chăm sóc / Xử lý", example: "" },
-            { word: "Take on", ipa: "", type: "phr", meaning: "Đảm nhận", example: "" },
-            { word: "Tremendous", ipa: "/trɪˈmen.dəs/", type: "adj", meaning: "To lớn", example: "" },
-            { word: "Under new management", ipa: "", type: "phr", meaning: "Dưới sự quản lý mới", example: "" },
-            
-            // --- 900 WORDS ---
-            { word: "Astute", ipa: "/əˈstuːt/", type: "adj", meaning: "Sắc sảo, tinh khôn", example: "" },
-            { word: "Bring along", ipa: "", type: "phr", meaning: "Mang theo", example: "" },
-            { word: "Compartment", ipa: "/kəmˈpɑːrt.mənt/", type: "n", meaning: "Ngăn, gian", example: "" },
-            { word: "Give way to", ipa: "", type: "phr", meaning: "Nhường đường cho", example: "" },
-            { word: "Overwork", ipa: "/ˌoʊ.vɚˈwɝːk/", type: "v", meaning: "Làm việc quá sức", example: "" },
-            { word: "Put down", ipa: "", type: "phr", meaning: "Đặt xuống / Làm bẽ mặt", example: "" },
-            { word: "Reach the solution", ipa: "", type: "phr", meaning: "Tìm ra giải pháp", example: "" },
-            { word: "Recharge", ipa: "/riːˈtʃɑːrdʒ/", type: "v", meaning: "Nạp lại", example: "" },
-            { word: "Smock", ipa: "/smɑːk/", type: "n", meaning: "Áo khoác ngoài / Áo bờ lu", example: "" },
-            { word: "Accessibility", ipa: "/əkˌses.əˈbɪl.ə.t̬i/", type: "n", meaning: "Khả năng tiếp cận", example: "" },
-            { word: "Coordinator", ipa: "/koʊˈɔːr.dən.eɪ.t̬ɚ/", type: "n", meaning: "Điều phối viên", example: "" },
-            { word: "Customary", ipa: "/ˈkʌs.tə.mer.i/", type: "adj", meaning: "Theo lệ thường", example: "" },
-            { word: "Disrupt", ipa: "/dɪsˈrʌpt/", type: "v", meaning: "Làm gián đoạn", example: "" },
-            { word: "Elevate", ipa: "/ˈel.ə.veɪt/", type: "v", meaning: "Nâng lên", example: "" },
-            { word: "Formality", ipa: "/fɔːrˈmæl.ə.t̬i/", type: "n", meaning: "Nghi thức", example: "" },
-            { word: "Restraint", ipa: "/rɪˈstreɪnt/", type: "n", meaning: "Sự kiềm chế", example: "" },
-            { word: "Sign out", ipa: "", type: "phr", meaning: "Đăng xuất / Ký tên ra về", example: "" },
-            { word: "Undeniable", ipa: "/ˌʌn.dɪˈnaɪ.ə.bəl/", type: "adj", meaning: "Không thể phủ nhận", example: "" },
-            { word: "Violation", ipa: "/ˌvaɪ.əˈleɪ.ʃən/", type: "n", meaning: "Sự vi phạm", example: "" },
-            { word: "Aggravate", ipa: "/ˈæɡ.rə.veɪt/", type: "v", meaning: "Làm trầm trọng thêm", example: "" },
-            { word: "Contingency", ipa: "/kənˈtɪn.dʒən.si/", type: "n", meaning: "Sự ngẫu nhiên / Việc bất ngờ", example: "" },
-            { word: "Draw the line at", ipa: "", type: "phr", meaning: "Đặt ra giới hạn", example: "" },
-            { word: "Draw up", ipa: "", type: "phr", meaning: "Soạn thảo", example: "" },
-            { word: "Evacuate", ipa: "/ɪˈvæk.ju.eɪt/", type: "v", meaning: "Sơ tán", example: "" },
-            { word: "In commemoration of", ipa: "", type: "phr", meaning: "Để kỷ niệm", example: "" },
-            { word: "On probation", ipa: "", type: "phr", meaning: "Trong thời gian thử việc", example: "" },
-            { word: "Overestimate", ipa: "/ˌoʊ.vɚˈes.tə.meɪt/", type: "v", meaning: "Đánh giá quá cao", example: "" },
-            { word: "Privilege", ipa: "/ˈprɪv.əl.ɪdʒ/", type: "n", meaning: "Đặc quyền", example: "" },
-            { word: "Restructure", ipa: "/ˌriːˈstrʌk.tʃɚ/", type: "v", meaning: "Tái cơ cấu", example: "" },
-            { word: "Segregate", ipa: "/ˈseɡ.rə.ɡeɪt/", type: "v", meaning: "Cách ly, tách riêng", example: "" },
-            { word: "Trigger", ipa: "/ˈtrɪɡ.ɚ/", type: "v", meaning: "Gây ra, kích hoạt", example: "" },
-            { word: "Wary of", ipa: "", type: "phr", meaning: "Cảnh giác với", example: "" }
-        ];
+        const vocabularyList = 
+        [
+  {
+    "word": "Sophisticated",
+    "ipa": "/səˈfɪs.tə.keɪ.t̬ɪd/",
+    "type": "adj",
+    "meaning": "Tinh vi, phức tạp, tinh tế",
+    "example": "A sophisticated surveillance system. (Một hệ thống giám sát tinh vi.)"
+  },
+  {
+    "word": "Sophistication",
+    "ipa": "/səˌfɪs.təˈkeɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự tinh tế",
+    "example": "Her style has a high level of sophistication. (Phong cách của cô ấy có một sự tinh tế cao.)"
+  },
+  {
+    "word": "Complex",
+    "ipa": "/kəmˈpleks/",
+    "type": "adj (syn)",
+    "meaning": "Phức tạp",
+    "example": "The problem is too complex to solve in one day. (Vấn đề này quá phức tạp để giải quyết trong một ngày.)"
+  },
+  {
+    "word": "Refined",
+    "ipa": "/rɪˈfaɪnd/",
+    "type": "adj (syn)",
+    "meaning": "Tinh xảo, công phu",
+    "example": "She has a very refined taste in art. (Cô ấy có gu thẩm mỹ rất tinh tế về nghệ thuật.)"
+  },
+  {
+    "word": "Timely",
+    "ipa": "/ˈtaɪm.li/",
+    "type": "adj",
+    "meaning": "Kịp thời",
+    "example": "Completed in a timely manner. (Được hoàn thành một cách kịp thời.)"
+  },
+  {
+    "word": "Realistically",
+    "ipa": "/ˌriː.əˈlɪs.tɪ.kəl.i/",
+    "type": "adv",
+    "meaning": "Theo thực tế",
+    "example": "We cannot realistically expect it. (Chúng ta không thể kỳ vọng nó theo thực tế được.)"
+  },
+  {
+    "word": "Realistic",
+    "ipa": "/ˌriː.əˈlɪs.tɪk/",
+    "type": "adj (der)",
+    "meaning": "Thực tế",
+    "example": "We need to set a realistic goal. (Chúng ta cần đặt ra một mục tiêu thực tế.)"
+  },
+  {
+    "word": "Realism",
+    "ipa": "/ˈriː.ə.lɪ.zəm/",
+    "type": "n (der)",
+    "meaning": "Chủ nghĩa hiện thực",
+    "example": "His paintings are known for their extreme realism. (Những bức tranh của ông nổi tiếng với chủ nghĩa hiện thực cực độ.)"
+  },
+  {
+    "word": "Promptly",
+    "ipa": "/ˈprɑːmpt.li/",
+    "type": "adv",
+    "meaning": "Nhanh chóng, ngay lập tức",
+    "example": "Respond promptly to all inquiries. (Phản hồi nhanh chóng cho tất cả các thắc mắc.)"
+  },
+  {
+    "word": "Prompt",
+    "ipa": "/prɑːmpt/",
+    "type": "adj (der)",
+    "meaning": "Nhanh chóng",
+    "example": "The company is known for its prompt service. (Công ty nổi tiếng với dịch vụ nhanh chóng.)"
+  },
+  {
+    "word": "Immediately",
+    "ipa": "/ɪˈmiː.di.ət.li/",
+    "type": "adv (syn)",
+    "meaning": "Ngay lập tức",
+    "example": "Please call me immediately when you arrive. (Hãy gọi cho tôi ngay lập tức khi bạn đến.)"
+  },
+  {
+    "word": "Instantly",
+    "ipa": "/ˈɪn.stənt.li/",
+    "type": "adv (syn)",
+    "meaning": "Ngay tức khắc",
+    "example": "The app updates the data instantly. (Ứng dụng cập nhật dữ liệu ngay tức khắc.)"
+  },
+  {
+    "word": "Accessible",
+    "ipa": "/əkˈses.ə.bəl/",
+    "type": "adj",
+    "meaning": "Có thể truy cập/sử dụng",
+    "example": "Only accessible to executive staff. (Chỉ nhân viên cấp cao mới có thể truy cập.)"
+  },
+  {
+    "word": "Access",
+    "ipa": "/ˈæk.ses/",
+    "type": "v (der)",
+    "meaning": "Truy cập",
+    "example": "You need a password to access the file. (Bạn cần mật khẩu để truy cập tệp tin.)"
+  },
+  {
+    "word": "Accessibility",
+    "ipa": "/əkˌses.əˈbɪl.ə.t̬i/",
+    "type": "n (der)",
+    "meaning": "Khả năng truy cập",
+    "example": "The building has improved its accessibility for disabled people. (Tòa nhà đã cải thiện khả năng tiếp cận cho người khuyết tật.)"
+  },
+  {
+    "word": "Implement",
+    "ipa": "/ˈɪm.plə.ment/",
+    "type": "v",
+    "meaning": "Thi hành, thực hiện",
+    "example": "Implement a marketing campaign. (Thực hiện một chiến dịch tiếp thị.)"
+  },
+  {
+    "word": "Implementation",
+    "ipa": "/ˌɪm.plə.menˈteɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự thi hành",
+    "example": "The implementation of the new policy began today. (Việc thực hiện chính sách mới đã bắt đầu từ hôm nay.)"
+  },
+  {
+    "word": "Execute",
+    "ipa": "/ˈek.sə.kjuːt/",
+    "type": "v (syn)",
+    "meaning": "Thực hiện",
+    "example": "The team failed to execute the plan correctly. (Nhóm đã không thực hiện kế hoạch một cách chính xác.)"
+  },
+  {
+    "word": "Feedback",
+    "ipa": "/ˈfiːd.bæk/",
+    "type": "n",
+    "meaning": "Phản hồi, ý kiến",
+    "example": "Feedback from colleagues. (Phản hồi từ các đồng nghiệp.)"
+  },
+  {
+    "word": "Outstanding",
+    "ipa": "/ˌaʊtˈstæn.dɪŋ/",
+    "type": "adj",
+    "meaning": "Nổi bật / Chưa thanh toán",
+    "example": "An outstanding business plan. (Một kế hoạch kinh doanh nổi bật.)"
+  },
+  {
+    "word": "Exceptional",
+    "ipa": "/ɪkˈsep.ʃən.əl/",
+    "type": "adj (syn)",
+    "meaning": "Xuất sắc",
+    "example": "His performance was truly exceptional. (Màn trình diễn của anh ấy thực sự xuất sắc.)"
+  },
+  {
+    "word": "Overdue",
+    "ipa": "/ˌoʊ.vɚˈduː/",
+    "type": "adj (syn)",
+    "meaning": "Quá hạn",
+    "example": "This library book is two weeks overdue. (Cuốn sách thư viện này đã quá hạn hai tuần.)"
+  },
+  {
+    "word": "Unpaid",
+    "ipa": "/ʌnˈpeɪd/",
+    "type": "adj (syn)",
+    "meaning": "Chưa thanh toán",
+    "example": "There are several unpaid invoices on your desk. (Có vài hóa đơn chưa thanh toán trên bàn của bạn.)"
+  },
+  {
+    "word": "Inform",
+    "ipa": "/ɪnˈfɔːrm/",
+    "type": "v",
+    "meaning": "Thông báo",
+    "example": "Please inform the director. (Làm ơn hãy thông báo cho giám đốc.)"
+  },
+  {
+    "word": "Information",
+    "ipa": "/ˌɪn.fɚˈmeɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Thông tin",
+    "example": "I need more information about the project. (Tôi cần thêm thông tin về dự án.)"
+  },
+  {
+    "word": "Informative",
+    "ipa": "/ɪnˈfɔːr.mə.t̬ɪv/",
+    "type": "adj (der)",
+    "meaning": "Nhiều thông tin",
+    "example": "The seminar was very informative. (Buổi hội thảo cung cấp rất nhiều thông tin.)"
+  },
+  {
+    "word": "Replacement",
+    "ipa": "/rɪˈpleɪs.mənt/",
+    "type": "n",
+    "meaning": "Sự thay thế, người thay thế",
+    "example": "Need a replacement for this laptop. (Cần một sự thay thế cho chiếc máy tính xách tay này.)"
+  },
+  {
+    "word": "Announcement",
+    "ipa": "/əˈnaʊns.mənt/",
+    "type": "n",
+    "meaning": "Thông báo",
+    "example": "Posted an announcement. (Đã đăng một thông báo.)"
+  },
+  {
+    "word": "Announce",
+    "ipa": "/əˈnaʊns/",
+    "type": "v (der)",
+    "meaning": "Thông báo",
+    "example": "The CEO will announce the merger tomorrow. (Giám đốc điều hành sẽ thông báo về việc sáp nhập vào ngày mai.)"
+  },
+  {
+    "word": "Department",
+    "ipa": "/dɪˈpɑːrt.mənt/",
+    "type": "n",
+    "meaning": "Phòng ban, bộ phận",
+    "example": "Report to the finance department. (Báo cáo cho bộ phận tài chính.)"
+  },
+  {
+    "word": "Permanently",
+    "ipa": "/ˈpɝː.mə.nənt.li/",
+    "type": "adv",
+    "meaning": "Vĩnh viễn",
+    "example": "Files permanently deleted. (Các tệp tin đã bị xóa vĩnh viễn.)"
+  },
+  {
+    "word": "Indefinitely",
+    "ipa": "/ɪnˈdef.ən.ət.li/",
+    "type": "adv (syn)",
+    "meaning": "Vô thời hạn",
+    "example": "The meeting has been postponed indefinitely. (Cuộc họp đã bị hoãn lại vô thời hạn.)"
+  },
+  {
+    "word": "Fulfill",
+    "ipa": "/fʊlˈfɪl/",
+    "type": "v",
+    "meaning": "Hoàn thành, đáp ứng",
+    "example": "Fulfilled the terms of the contract. (Đã đáp ứng các điều khoản của hợp đồng.)"
+  },
+  {
+    "word": "Fulfillment",
+    "ipa": "/fʊlˈfɪl.mənt/",
+    "type": "n (der)",
+    "meaning": "Sự hoàn thành",
+    "example": "Customer satisfaction is key to business fulfillment. (Sự hài lòng của khách hàng là chìa khóa để hoàn tất kinh doanh.)"
+  },
+  {
+    "word": "Meet",
+    "ipa": "/miːt/",
+    "type": "v (syn)",
+    "meaning": "Đáp ứng",
+    "example": "We must meet the client's requirements. (Chúng ta phải đáp ứng các yêu cầu của khách hàng.)"
+  },
+  {
+    "word": "Outline",
+    "ipa": "/ˈaʊt.laɪn/",
+    "type": "n",
+    "meaning": "Dàn bài, phác thảo",
+    "example": "Arranging ideas in an outline. (Sắp xếp các ý tưởng trong một bản phác thảo.)"
+  },
+  {
+    "word": "Outline",
+    "ipa": "/ˈaʊt.laɪn/",
+    "type": "v",
+    "meaning": "Vạch ra, phác thảo",
+    "example": "Outlined the features. (Đã phác thảo các tính năng.)"
+  },
+  {
+    "word": "Explain",
+    "ipa": "/ɪkˈspleɪn/",
+    "type": "v",
+    "meaning": "Giải thích",
+    "example": "Explained the new regulations. (Đã giải thích các quy định mới.)"
+  },
+  {
+    "word": "Explanation",
+    "ipa": "/ˌek.spləˈneɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự giải thích",
+    "example": "Can you give me an explanation for the delay? (Bạn có thể đưa ra lời giải thích cho sự chậm trễ này không?)"
+  },
+  {
+    "word": "Contain",
+    "ipa": "/kənˈteɪn/",
+    "type": "v",
+    "meaning": "Chứa đựng, bao gồm",
+    "example": "Cabinet contains copies. (Tủ chứa các bản sao.)"
+  },
+  {
+    "word": "Include",
+    "ipa": "/ɪnˈkluːd/",
+    "type": "v (syn)",
+    "meaning": "Bao gồm",
+    "example": "Does the price include tax? (Giá này đã bao gồm thuế chưa?)"
+  },
+  {
+    "word": "Compile",
+    "ipa": "/kəmˈpaɪl/",
+    "type": "v",
+    "meaning": "Biên soạn, tổng hợp",
+    "example": "Compile a list. (Tổng hợp một danh sách.)"
+  },
+  {
+    "word": "Subsequent",
+    "ipa": "/ˈsʌb.sɪ.kwənt/",
+    "type": "adj",
+    "meaning": "Đến sau, theo sau",
+    "example": "Subsequent to the closing. (Sau khi kết thúc/đóng cửa.)"
+  },
+  {
+    "word": "Overview",
+    "ipa": "/ˈoʊ.vɚ.vjuː/",
+    "type": "n",
+    "meaning": "Tổng quan",
+    "example": "Gave an overview of the topic. (Đã đưa ra một cái nhìn tổng quan về chủ đề.)"
+  },
+  {
+    "word": "Provider",
+    "ipa": "/prəˈvaɪ.dɚ/",
+    "type": "n",
+    "meaning": "Nhà cung cấp",
+    "example": "Internet provider. (Nhà cung cấp Internet.)"
+  },
+  {
+    "word": "Matter",
+    "ipa": "/ˈmæt̬.ɚ/",
+    "type": "n",
+    "meaning": "Vấn đề",
+    "example": "Deal with personal matters. (Giải quyết các vấn đề cá nhân.)"
+  },
+  {
+    "word": "Matter",
+    "ipa": "/ˈmæt̬.ɚ/",
+    "type": "v",
+    "meaning": "Quan trọng",
+    "example": "It doesn't matter who is right. (Ai đúng không quan trọng.)"
+  },
+  {
+    "word": "Expertise",
+    "ipa": "/ˌek.spɝːˈtiːz/",
+    "type": "n",
+    "meaning": "Chuyên môn",
+    "example": "Area of expertise. (Lĩnh vực chuyên môn.)"
+  },
+  {
+    "word": "Expert",
+    "ipa": "/ˈek.spɝːt/",
+    "type": "n (der)",
+    "meaning": "Chuyên gia",
+    "example": "We need to consult a legal expert. (Chúng ta cần tham khảo ý kiến của một chuyên gia pháp lý.)"
+  },
+  {
+    "word": "Demonstrate",
+    "ipa": "/ˈdem.ən.streɪt/",
+    "type": "v",
+    "meaning": "Chứng minh, minh họa",
+    "example": "Sales figures demonstrate success. (Số liệu bán hàng chứng minh sự thành công.)"
+  },
+  {
+    "word": "Demonstration",
+    "ipa": "/ˌdem.ənˈstreɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự chứng minh",
+    "example": "A practical demonstration of the new tool. (Một buổi minh họa thực tế về công cụ mới.)"
+  },
+  {
+    "word": "Prove",
+    "ipa": "/pruːv/",
+    "type": "v (syn)",
+    "meaning": "Chứng minh",
+    "example": "Can you prove your identity? (Bạn có thể chứng minh danh tính của mình không?)"
+  },
+  {
+    "word": "Remainder",
+    "ipa": "/rɪˈmeɪ.n dɚ/",
+    "type": "n",
+    "meaning": "Phần còn lại",
+    "example": "Remainder of the month. (Phần còn lại của tháng.)"
+  },
+  {
+    "word": "Remain",
+    "ipa": "/rɪˈmeɪn/",
+    "type": "v (der)",
+    "meaning": "Còn lại",
+    "example": "Please remain seated until the plane stops. (Vui lòng giữ nguyên vị trí ngồi cho đến khi máy bay dừng hẳn.)"
+  },
+  {
+    "word": "Remaining",
+    "ipa": "/rɪˈmeɪ.nɪŋ/",
+    "type": "adj (der)",
+    "meaning": "Còn lại",
+    "example": "The remaining tasks are simple. (Các nhiệm vụ còn lại rất đơn giản.)"
+  },
+  {
+    "word": "Balance",
+    "ipa": "/ˈbæl.əns/",
+    "type": "n (syn)",
+    "meaning": "Số dư",
+    "example": "Check your account balance online. (Kiểm tra số dư tài khoản của bạn trực tuyến.)"
+  },
+  {
+    "word": "Essential",
+    "ipa": "/ɪˈsen.ʃəl/",
+    "type": "adj",
+    "meaning": "Thiết yếu",
+    "example": "Essential to success. (Thiết yếu cho sự thành công.)"
+  },
+  {
+    "word": "Divide",
+    "ipa": "/dɪˈvaɪd/",
+    "type": "v",
+    "meaning": "Phân chia",
+    "example": "Divided equally. (Được chia đều.)"
+  },
+  {
+    "word": "Division",
+    "ipa": "/dɪˈvɪʒ.ən/",
+    "type": "n (der)",
+    "meaning": "Sự phân chia",
+    "example": "The sales division is on the third floor. (Bộ phận bán hàng nằm ở tầng ba.)"
+  },
+  {
+    "word": "Dividend",
+    "ipa": "/ˈdɪv.ə.dend/",
+    "type": "n (der)",
+    "meaning": "Cổ tức",
+    "example": "The company paid a high dividend this year. (Công ty đã trả cổ tức cao trong năm nay.)"
+  },
+  {
+    "word": "Break up",
+    "ipa": "/breɪk ʌp/",
+    "type": "phr (syn)",
+    "meaning": "Chia ra",
+    "example": "We should break up the project into smaller tasks. (Chúng ta nên chia dự án thành các nhiệm vụ nhỏ hơn.)"
+  },
+  {
+    "word": "Major",
+    "ipa": "/ˈmeɪ.dʒɚ/",
+    "type": "adj",
+    "meaning": "Chính, chủ yếu",
+    "example": "A major figure. (Một nhân vật quan trọng.)"
+  },
+  {
+    "word": "Compliance",
+    "ipa": "/kəmˈplaɪ.əns/",
+    "type": "n",
+    "meaning": "Sự tuân thủ",
+    "example": "Compliance with guidelines. (Sự tuân thủ các hướng dẫn.)"
+  },
+  {
+    "word": "Comply",
+    "ipa": "/kəmˈplaɪ/",
+    "type": "v (der)",
+    "meaning": "Tuân theo",
+    "example": "You must comply with the safety rules. (Bạn phải tuân theo các quy tắc an toàn.)"
+  },
+  {
+    "word": "Clarify",
+    "ipa": "/ˈkler.ə.faɪ/",
+    "type": "v",
+    "meaning": "Làm rõ",
+    "example": "Clarified some details. (Đã làm rõ một số chi tiết.)"
+  },
+  {
+    "word": "Clarification",
+    "ipa": "/ˌkler.ə.fəˈkeɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự làm rõ",
+    "example": "I need clarification on the last point. (Tôi cần làm rõ về điểm cuối cùng.)"
+  },
+  {
+    "word": "Face",
+    "ipa": "/feɪs/",
+    "type": "v",
+    "meaning": "Đối mặt",
+    "example": "Faced with the challenge. (Đối mặt với thử thách.)"
+  },
+  {
+    "word": "Confront",
+    "ipa": "/kənˈfrʌnt/",
+    "type": "v (syn)",
+    "meaning": "Đương đầu",
+    "example": "We must confront the problem immediately. (Chúng ta phải đương đầu với vấn đề ngay lập tức.)"
+  },
+  {
+    "word": "Follow",
+    "ipa": "/ˈfɑː.loʊ/",
+    "type": "v",
+    "meaning": "Theo sau, làm theo, hiểu",
+    "example": "Followed the guide. (Đã đi theo người hướng dẫn.)"
+  },
+  {
+    "word": "Following",
+    "ipa": "/ˈfɑː.loʊ.ɪŋ/",
+    "type": "prep/adj (der)",
+    "meaning": "Sau đây / Tiếp theo",
+    "example": "Following the meeting, we had lunch. (Sau cuộc họp, chúng tôi đã ăn trưa.)"
+  },
+  {
+    "word": "Monitor",
+    "ipa": "/ˈmɑː.nə.t̬ɚ/",
+    "type": "v (syn)",
+    "meaning": "Theo dõi",
+    "example": "We need to monitor the progress closely. (Chúng ta cần theo dõi tiến độ một cách chặt chẽ.)"
+  },
+  {
+    "word": "Pay attention to",
+    "ipa": "/peɪ əˈten.ʃən tuː/",
+    "type": "phr (syn)",
+    "meaning": "Chú ý đến",
+    "example": "Please pay attention to the instructions. (Vui lòng chú ý đến các hướng dẫn.)"
+  },
+  {
+    "word": "Aspect",
+    "ipa": "/ˈæs.pekt/",
+    "type": "n",
+    "meaning": "Khía cạnh",
+    "example": "Every aspect of the problem. (Mọi khía cạnh của vấn đề.)"
+  },
+  {
+    "word": "Apparently",
+    "ipa": "/əˈper.ənt.li/",
+    "type": "adv",
+    "meaning": "Hình như, có vẻ",
+    "example": "Apparently not invited. (Hình như không được mời.)"
+  },
+  {
+    "word": "Seemingly",
+    "ipa": "/ˈsiː.mɪŋ.li/",
+    "type": "adv (syn)",
+    "meaning": "Có vẻ",
+    "example": "A seemingly impossible task. (Một nhiệm vụ có vẻ như bất khả thi.)"
+  },
+  {
+    "word": "Aware",
+    "ipa": "/əˈwer/",
+    "type": "adj",
+    "meaning": "Nhận thức, biết",
+    "example": "Made aware of safety procedures. (Đã được biết về các quy trình an toàn.)"
+  },
+  {
+    "word": "Awareness",
+    "ipa": "/əˈwer.nəs/",
+    "type": "n (der)",
+    "meaning": "Sự nhận thức",
+    "example": "Public awareness of environmental issues is rising. (Nhận thức của công chúng về các vấn đề môi trường đang tăng lên.)"
+  },
+  {
+    "word": "Extended",
+    "ipa": "/ɪkˈsten.dɪd/",
+    "type": "adj",
+    "meaning": "Mở rộng, kéo dài",
+    "example": "Extended hours. (Giờ làm việc kéo dài.)"
+  },
+  {
+    "word": "Extend",
+    "ipa": "/ɪkˈstend/",
+    "type": "v (der)",
+    "meaning": "Mở rộng",
+    "example": "They decided to extend the deadline. (Họ đã quyết định gia hạn thời hạn.)"
+  },
+  {
+    "word": "Extension",
+    "ipa": "/ɪkˈsten.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự gia hạn",
+    "example": "Can I get an extension on my assignment? (Tôi có thể xin gia hạn cho bài tập của mình không?)"
+  },
+  {
+    "word": "Accidentally",
+    "ipa": "/ˌæk.səˈden.t̬əl.i/",
+    "type": "adv",
+    "meaning": "Vô tình",
+    "example": "Accidentally made errors. (Vô tình mắc lỗi.)"
+  },
+  {
+    "word": "Accident",
+    "ipa": "/ˈæk.sə.dənt/",
+    "type": "n (der)",
+    "meaning": "Tai nạn",
+    "example": "It was just a minor accident. (Đó chỉ là một tai nạn nhỏ.)"
+  },
+  {
+    "word": "Accidental",
+    "ipa": "/ˌæk.səˈden.t̬əl/",
+    "type": "adj (der)",
+    "meaning": "Tình cờ",
+    "example": "The discovery was purely accidental. (Khám phá đó hoàn toàn là tình cờ.)"
+  },
+  {
+    "word": "Deliberately",
+    "ipa": "/dɪˈlɪb.ɚ.ət.li/",
+    "type": "adv (ant)",
+    "meaning": "Cố ý",
+    "example": "She deliberately ignored my email. (Cô ấy đã cố tình phớt lờ email của tôi.)"
+  },
+  {
+    "word": "Advisable",
+    "ipa": "/ədˈvaɪ.zə.bəl/",
+    "type": "adj",
+    "meaning": "Nên làm, thích hợp",
+    "example": "It is advisable to update. (Nên cập nhật/Thích hợp để cập nhật.)"
+  },
+  {
+    "word": "Advise",
+    "ipa": "/ədˈvaɪz/",
+    "type": "v (der)",
+    "meaning": "Khuyên",
+    "example": "I advise you to stay home. (Tôi khuyên bạn nên ở nhà.)"
+  },
+  {
+    "word": "Advice",
+    "ipa": "/ədˈvaɪs/",
+    "type": "n (der)",
+    "meaning": "Lời khuyên",
+    "example": "Thank you for your helpful advice. (Cảm ơn bạn vì lời khuyên hữu ích.)"
+  },
+  {
+    "word": "Concerned",
+    "ipa": "/kənˈsɝːnd/",
+    "type": "adj",
+    "meaning": "Lo lắng / Có liên quan",
+    "example": "Concerned about security. (Lo lắng về an ninh.)"
+  },
+  {
+    "word": "Concern",
+    "ipa": "/kənˈsɝːn/",
+    "type": "n/v (der)",
+    "meaning": "Mối quan tâm / Lo lắng",
+    "example": "This issue is a major concern for us. (Vấn đề này là một mối quan tâm lớn đối với chúng tôi.)"
+  },
+  {
+    "word": "Speak",
+    "ipa": "/spiːk/",
+    "type": "v",
+    "meaning": "Nói",
+    "example": "Spoke to his clients. (Đã nói chuyện với khách hàng của ông ấy.)"
+  },
+  {
+    "word": "Briefcase",
+    "ipa": "/ˈbriːf.keɪs/",
+    "type": "n",
+    "meaning": "Cặp đựng tài liệu",
+    "example": "He forgot his briefcase in the taxi. (Anh ấy đã quên cặp tài liệu trong taxi.)"
+  },
+  {
+    "word": "Business trip",
+    "ipa": "/ˈbɪz.nɪs trɪp/",
+    "type": "phr",
+    "meaning": "Chuyến công tác",
+    "example": "I am going on a business trip to Tokyo. (Tôi chuẩn bị đi công tác ở Tokyo.)"
+  },
+  {
+    "word": "Come over",
+    "ipa": "/kʌm ˈoʊ.vɚ/",
+    "type": "phr",
+    "meaning": "Ghé qua",
+    "example": "Why don't you come over for dinner? (Tại sao bạn không ghé qua ăn tối nhỉ?)"
+  },
+  {
+    "word": "Counter",
+    "ipa": "/ˈkaʊn.t̬ɚ/",
+    "type": "n",
+    "meaning": "Quầy",
+    "example": "Please pay at the counter. (Vui lòng thanh toán tại quầy.)"
+  },
+  {
+    "word": "E-mail",
+    "ipa": "/ˈiː.meɪl/",
+    "type": "n/v",
+    "meaning": "Thư điện tử",
+    "example": "I will e-mail the report to you. (Tôi sẽ gửi báo cáo qua email cho bạn.)"
+  },
+  {
+    "word": "Filing cabinet",
+    "ipa": "/ˈfaɪ.lɪŋ ˌkæb.ɪ.nət/",
+    "type": "phr",
+    "meaning": "Tủ hồ sơ",
+    "example": "The contracts are in the filing cabinet. (Các hợp đồng nằm trong tủ hồ sơ.)"
+  },
+  {
+    "word": "Folder",
+    "ipa": "/ˈfoʊl.dɚ/",
+    "type": "n",
+    "meaning": "Bìa kẹp hồ sơ",
+    "example": "Put the documents in a blue folder. (Hãy để tài liệu vào một bìa kẹp màu xanh.)"
+  },
+  {
+    "word": "Headache",
+    "ipa": "/ˈhed.eɪk/",
+    "type": "n",
+    "meaning": "Đau đầu",
+    "example": "I have a terrible headache today. (Hôm nay tôi bị đau đầu kinh khủng.)"
+  },
+  {
+    "word": "Internship",
+    "ipa": "/ˈɪn.tɝːn.ʃɪp/",
+    "type": "n",
+    "meaning": "Kỳ thực tập",
+    "example": "She is doing an internship at a bank. (Cô ấy đang thực tập tại một ngân hàng.)"
+  },
+  {
+    "word": "Redo",
+    "ipa": "/ˌriːˈduː/",
+    "type": "v",
+    "meaning": "Làm lại",
+    "example": "You need to redo this assignment. (Bạn cần làm lại bài tập này.)"
+  },
+  {
+    "word": "Routine",
+    "ipa": "/ruːˈtiːn/",
+    "type": "n/adj",
+    "meaning": "Thói quen / Thường lệ",
+    "example": "Exercise is part of my daily routine. (Tập thể dục là một phần thói quen hàng ngày của tôi.)"
+  },
+  {
+    "word": "Table lamp",
+    "ipa": "/ˈteɪ.bəl læmp/",
+    "type": "phr",
+    "meaning": "Đèn bàn",
+    "example": "I bought a new table lamp for my desk. (Tôi đã mua một chiếc đèn bàn mới cho bàn làm việc của mình.)"
+  },
+  {
+    "word": "Thanks to",
+    "ipa": "/θæŋks tuː/",
+    "type": "phr",
+    "meaning": "Nhờ có",
+    "example": "Thanks to your help, I finished early. (Nhờ có sự giúp đỡ của bạn, tôi đã hoàn thành sớm.)"
+  },
+  {
+    "word": "Timetable",
+    "ipa": "/ˈtaɪmˌteɪ.bəl/",
+    "type": "n",
+    "meaning": "Thời gian biểu",
+    "example": "Check the train timetable before you go. (Hãy kiểm tra thời gian biểu tàu hỏa trước khi bạn đi.)"
+  },
+  {
+    "word": "Window display",
+    "ipa": "/ˈwɪn.doʊ dɪˈspleɪ/",
+    "type": "phr",
+    "meaning": "Cửa sổ trưng bày",
+    "example": "The window display attracted many shoppers. (Cửa sổ trưng bày đã thu hút nhiều người mua sắm.)"
+  },
+  {
+    "word": "Chief",
+    "ipa": "/tʃiːf/",
+    "type": "n/adj",
+    "meaning": "Người đứng đầu / Trọng yếu",
+    "example": "He is the chief executive officer. (Ông ấy là giám đốc điều hành cấp cao nhất.)"
+  },
+  {
+    "word": "Conceal",
+    "ipa": "/kənˈsiːl/",
+    "type": "v",
+    "meaning": "Che giấu",
+    "example": "He tried to conceal his emotions. (Anh ấy đã cố gắng che giấu cảm xúc của mình.)"
+  },
+  {
+    "word": "Correct",
+    "ipa": "/kəˈrekt/",
+    "type": "adj/v",
+    "meaning": "Đúng / Sửa chữa",
+    "example": "Please correct the spelling mistakes. (Vui lòng sửa các lỗi chính tả.)"
+  },
+  {
+    "word": "Economic",
+    "ipa": "/ˌiː.kəˈnɑː.mɪk/",
+    "type": "adj",
+    "meaning": "Thuộc kinh tế",
+    "example": "The country is facing economic growth. (Đất nước đang đối mặt với sự tăng trưởng kinh tế.)"
+  },
+  {
+    "word": "Embrace",
+    "ipa": "/ɪmˈbreɪs/",
+    "type": "v",
+    "meaning": "Đón nhận, ôm",
+    "example": "We should embrace new technology. (Chúng ta nên đón nhận công nghệ mới.)"
+  },
+  {
+    "word": "Expected",
+    "ipa": "/ɪkˈspek.tɪd/",
+    "type": "adj",
+    "meaning": "Được mong đợi",
+    "example": "The results were exactly as expected. (Kết quả hoàn toàn đúng như mong đợi.)"
+  },
+  {
+    "word": "Forum",
+    "ipa": "/ˈfɔːr.əm/",
+    "type": "n",
+    "meaning": "Diễn đàn",
+    "example": "An online forum for web developers. (Một diễn đàn trực tuyến cho các nhà phát triển web.)"
+  },
+  {
+    "word": "Instead of",
+    "ipa": "/ɪnˈsted ʌv/",
+    "type": "phr",
+    "meaning": "Thay vì",
+    "example": "Let's walk instead of taking the bus. (Hãy đi bộ thay vì đi xe buýt.)"
+  },
+  {
+    "word": "Mission",
+    "ipa": "/ˈmɪʃ.ən/",
+    "type": "n",
+    "meaning": "Sứ mệnh, nhiệm vụ",
+    "example": "Our mission is to provide quality education. (Sứ mệnh của chúng tôi là cung cấp giáo dục chất lượng.)"
+  },
+  {
+    "word": "Programming",
+    "ipa": "/ˈproʊ.ɡræm.ɪŋ/",
+    "type": "n",
+    "meaning": "Lập trình",
+    "example": "She is studying computer programming. (Cô ấy đang học lập trình máy tính.)"
+  },
+  {
+    "word": "Rush",
+    "ipa": "/rʌʃ/",
+    "type": "v",
+    "meaning": "Vội vã, đổ xô",
+    "example": "Don't rush into making a decision. (Đừng vội vàng đưa ra quyết định.)"
+  },
+  {
+    "word": "Unfortunately",
+    "ipa": "/ʌnˈfɔːr.tʃən.ət.li/",
+    "type": "adv",
+    "meaning": "Thật không may",
+    "example": "Unfortunately, the flight was cancelled. (Thật không may, chuyến bay đã bị hủy.)"
+  },
+  {
+    "word": "Archive",
+    "ipa": "/ˈɑːr.kaɪv/",
+    "type": "n",
+    "meaning": "Kho lưu trữ",
+    "example": "You can find old records in the archive. (Bạn có thể tìm thấy các hồ sơ cũ trong kho lưu trữ.)"
+  },
+  {
+    "word": "Be unwilling to",
+    "ipa": "/bi ʌnˈwɪl.ɪŋ tuː/",
+    "type": "phr",
+    "meaning": "Không sẵn lòng",
+    "example": "They are unwilling to change the policy. (Họ không sẵn lòng thay đổi chính sách.)"
+  },
+  {
+    "word": "Be up late",
+    "ipa": "/bi ʌp leɪt/",
+    "type": "phr",
+    "meaning": "Thức khuya",
+    "example": "I will be up late finishing this project. (Tôi sẽ thức khuya để hoàn thành dự án này.)"
+  },
+  {
+    "word": "Blackout",
+    "ipa": "/ˈblæk.aʊt/",
+    "type": "n",
+    "meaning": "Mất điện",
+    "example": "The storm caused a total blackout. (Cơn bão đã gây ra tình trạng mất điện hoàn toàn.)"
+  },
+  {
+    "word": "Board meeting",
+    "ipa": "/bɔːrd ˈmiː.t̬ɪŋ/",
+    "type": "phr",
+    "meaning": "Họp hội đồng quản trị",
+    "example": "The board meeting will start at 10 AM. (Cuộc họp hội đồng quản trị sẽ bắt đầu lúc 10 giờ sáng.)"
+  },
+  {
+    "word": "Board of directors",
+    "ipa": "/bɔːrd ʌv dɪˈrek.tɚz/",
+    "type": "phr",
+    "meaning": "Hội đồng quản trị",
+    "example": "The board of directors approved the budget. (Hội đồng quản trị đã phê duyệt ngân sách.)"
+  },
+  {
+    "word": "Cross one's arms",
+    "ipa": "/krɔːs wʌnz ɑːrmz/",
+    "type": "phr",
+    "meaning": "Khoanh tay",
+    "example": "He stood there with his arms crossed. (Anh ấy đứng đó with đôi tay khoanh lại.)"
+  },
+  {
+    "word": "Depressing",
+    "ipa": "/dɪˈpres.ɪŋ/",
+    "type": "adj",
+    "meaning": "Gây chán nản",
+    "example": "The news about the economy is depressing. (Tin tức về nền kinh tế thật gây chán nản.)"
+  },
+  {
+    "word": "Drag",
+    "ipa": "/dræɡ/",
+    "type": "v",
+    "meaning": "Kéo lê",
+    "example": "Don't drag the chair across the floor. (Đừng kéo lê chiếc ghế trên sàn nhà.)"
+  },
+  {
+    "word": "Fold in half",
+    "ipa": "/foʊld ɪn hæf/",
+    "type": "phr",
+    "meaning": "Gấp đôi",
+    "example": "Fold the paper in half. (Hãy gấp đôi tờ giấy lại.)"
+  },
+  {
+    "word": "Fold up",
+    "ipa": "/foʊld ʌp/",
+    "type": "phr",
+    "meaning": "Gấp lại",
+    "example": "Please fold up the chairs after use. (Vui lòng gấp ghế lại sau khi sử dụng.)"
+  },
+  {
+    "word": "Frighten",
+    "ipa": "/ˈfraɪ.tən/",
+    "type": "v",
+    "meaning": "Làm hoảng sợ",
+    "example": "The loud noise frightened the children. (Tiếng động lớn đã làm bọn trẻ hoảng sợ.)"
+  },
+  {
+    "word": "Keep going",
+    "ipa": "/kiːp ˈɡoʊ.ɪŋ/",
+    "type": "phr",
+    "meaning": "Tiếp tục",
+    "example": "Just keep going until you reach the end. (Cứ tiếp tục đi cho đến khi bạn đến đích.)"
+  },
+  {
+    "word": "Long-term",
+    "ipa": "/ˌlɑːŋˈtɝːm/",
+    "type": "adj",
+    "meaning": "Dài hạn",
+    "example": "We need a long-term strategy. (Chúng ta cần một chiến lược dài hạn.)"
+  },
+  {
+    "word": "Look up",
+    "ipa": "/lʊk ʌp/",
+    "type": "phr",
+    "meaning": "Tra cứu",
+    "example": "Look up the word in the dictionary. (Hãy tra cứu từ đó trong từ điển.)"
+  },
+  {
+    "word": "Look up to",
+    "ipa": "/lʊk ʌp tuː/",
+    "type": "phr",
+    "meaning": "Kính trọng",
+    "example": "I look up to my father. (Tôi kính trọng cha mình.)"
+  },
+  {
+    "word": "Make a presentation",
+    "ipa": "/meɪk ə ˌprez.enˈteɪ.ʃən/",
+    "type": "phr",
+    "meaning": "Thuyết trình",
+    "example": "I have to make a presentation tomorrow. (Tôi phải thuyết trình vào ngày mai.)"
+  },
+  {
+    "word": "Make a revision",
+    "ipa": "/meɪk ə rɪˈvɪʒ.ən/",
+    "type": "phr",
+    "meaning": "Sửa đổi",
+    "example": "We need to make a revision to the draft. (Chúng ta cần sửa đổi bản nháp.)"
+  },
+  {
+    "word": "Make an error",
+    "ipa": "/meɪk æn ˈer.ɚ/",
+    "type": "phr",
+    "meaning": "Mắc lỗi",
+    "example": "Anyone can make an error sometimes. (Bất kỳ ai đôi khi cũng có thể mắc lỗi.)"
+  },
+  {
+    "word": "Meet the deadline",
+    "ipa": "/miːt ðə ˈded.laɪn/",
+    "type": "phr",
+    "meaning": "Kịp thời hạn",
+    "example": "We must work hard to meet the deadline. (Chúng ta phải làm việc chăm chỉ để kịp thời hạn.)"
+  },
+  {
+    "word": "Meet requirements",
+    "ipa": "/miːt rɪˈkwaɪr.mənts/",
+    "type": "phr",
+    "meaning": "Đáp ứng yêu cầu",
+    "example": "The product does not meet our requirements. (Sản phẩm này không đáp ứng các yêu cầu của chúng tôi.)"
+  },
+  {
+    "word": "Mess up",
+    "ipa": "/mes ʌp/",
+    "type": "phr",
+    "meaning": "Làm lộn xộn / Hỏng việc",
+    "example": "I'm sorry, I really messed up the plan. (Tôi xin lỗi, tôi thực sự đã làm hỏng kế hoạch.)"
+  },
+  {
+    "word": "Schedule doesn't permit",
+    "ipa": "/ˈskedʒ.uːl ˈdʌz.ənt pɚˈmɪt/",
+    "type": "phr",
+    "meaning": "Lịch trình không cho phép",
+    "example": "I'd love to go, but my schedule doesn't permit it. (Tôi rất muốn đi, nhưng lịch trình không cho phép.)"
+  },
+  {
+    "word": "Obvious",
+    "ipa": "/ˈɑːb.vi.əs/",
+    "type": "adj",
+    "meaning": "Rõ ràng",
+    "example": "The answer to the question was obvious. (Câu trả lời cho câu hỏi đã quá rõ ràng.)"
+  },
+  {
+    "word": "Office supplies",
+    "ipa": "/ˈɑː.fɪs səˈplaɪz/",
+    "type": "phr",
+    "meaning": "Văn phòng phẩm",
+    "example": "We need to order more office supplies. (Chúng ta cần đặt thêm văn phòng phẩm.)"
+  },
+  {
+    "word": "Overlook",
+    "ipa": "/ˌoʊ.vɚˈlʊk/",
+    "type": "v",
+    "meaning": "Bỏ qua / Nhìn ra",
+    "example": "Don't overlook the importance of safety. (Đừng bỏ qua tầm quan trọng của an toàn.)"
+  },
+  {
+    "word": "Overnight",
+    "ipa": "/ˌoʊ.vɚˈnaɪt/",
+    "type": "adv",
+    "meaning": "Qua đêm",
+    "example": "Can I stay overnight at your place? (Tôi có thể ở lại qua đêm tại chỗ bạn không?)"
+  },
+  {
+    "word": "Papers",
+    "ipa": "/ˈpeɪ.pɚz/",
+    "type": "n",
+    "meaning": "Giấy tờ",
+    "example": "Please sign these papers. (Vui lòng ký vào những giấy tờ này.)"
+  },
+  {
+    "word": "Proofread",
+    "ipa": "/ˈpruːf.riːd/",
+    "type": "v",
+    "meaning": "Đọc soát lỗi",
+    "example": "Always proofread your emails before sending. (Luôn đọc soát lỗi email của bạn trước khi gửi.)"
+  },
+  {
+    "word": "Rearrange",
+    "ipa": "/ˌriː.əˈreɪndʒ/",
+    "type": "v",
+    "meaning": "Sắp xếp lại",
+    "example": "Let's rearrange the furniture. (Hãy sắp xếp lại đồ nội thất.)"
+  },
+  {
+    "word": "Recondition",
+    "ipa": "/ˌriː.kənˈdɪʃ.ən/",
+    "type": "v",
+    "meaning": "Tân trang, sửa chữa",
+    "example": "The old engine was reconditioned. (Động cơ cũ đã được tân trang lại.)"
+  },
+  {
+    "word": "Rest chin on hand",
+    "ipa": "/rest tʃɪn ɑːn hænd/",
+    "type": "phr",
+    "meaning": "Chống cằm",
+    "example": "She rested her chin on her hand, thinking deeply. (Cô ấy chống cằm, suy nghĩ sâu xa.)"
+  },
+  {
+    "word": "Stool",
+    "ipa": "/stuːl/",
+    "type": "n",
+    "meaning": "Ghế đẩu",
+    "example": "He sat on a wooden stool at the bar. (Anh ấy ngồi trên một chiếc ghế đẩu gỗ tại quầy bar.)"
+  },
+  {
+    "word": "Timecard",
+    "ipa": "/ˈtaɪm.kɑːrd/",
+    "type": "n",
+    "meaning": "Thẻ chấm công",
+    "example": "Don't forget to punch your timecard. (Đừng quên bấm thẻ chấm công của bạn.)"
+  },
+  {
+    "word": "Wipe",
+    "ipa": "/waɪp/",
+    "type": "v",
+    "meaning": "Lau chùi",
+    "example": "Please wipe the table after lunch. (Vui lòng lau bàn sau khi ăn trưa.)"
+  },
+  {
+    "word": "Work additional hours",
+    "ipa": "/wɝːk əˈdɪʃ.ən.əl ˈaʊ.ɚz/",
+    "type": "phr",
+    "meaning": "Làm thêm giờ",
+    "example": "I need to work additional hours to finish this. (Tôi cần làm thêm giờ để hoàn thành việc này.)"
+  },
+  {
+    "word": "Work shift",
+    "ipa": "/wɝːk ʃɪft/",
+    "type": "phr",
+    "meaning": "Ca làm việc",
+    "example": "My work shift starts at midnight. (Ca làm việc của tôi bắt đầu lúc nửa đêm.)"
+  },
+  {
+    "word": "Burdensome",
+    "ipa": "/ˈbɝː.dən.səm/",
+    "type": "adj",
+    "meaning": "Nặng nề, phiền toái",
+    "example": "The new regulations are very burdensome. (Các quy định mới rất phiền toái.)"
+  },
+  {
+    "word": "Circulate",
+    "ipa": "/ˈsɝː.kjə.leɪt/",
+    "type": "v",
+    "meaning": "Lưu thông / Truyền bá",
+    "example": "Please circulate this memo to all staff. (Vui lòng lưu hành bản ghi nhớ này đến toàn bộ nhân viên.)"
+  },
+  {
+    "word": "Commend",
+    "ipa": "/kəˈmend/",
+    "type": "v",
+    "meaning": "Khen ngợi",
+    "example": "I would like to commend you on your hard work. (Tôi muốn khen ngợi bạn vì sự chăm chỉ.)"
+  },
+  {
+    "word": "Company",
+    "ipa": "/ˈkʌm.pə.ni/",
+    "type": "n",
+    "meaning": "Công ty / Sự đi cùng",
+    "example": "I enjoy your company. (Tôi thích sự đồng hành/đi cùng của bạn.)"
+  },
+  {
+    "word": "Discourage",
+    "ipa": "/dɪˈskɝː.ɪdʒ/",
+    "type": "v",
+    "meaning": "Làm nản lòng",
+    "example": "Don't let failure discourage you. (Đừng để thất bại làm bạn nản lòng.)"
+  },
+  {
+    "word": "Distraction",
+    "ipa": "/dɪˈstræk.ʃən/",
+    "type": "n",
+    "meaning": "Sự sao nhãng",
+    "example": "I can't work with all this distraction. (Tôi không thể làm việc với tất cả sự sao nhãng này.)"
+  },
+  {
+    "word": "Failure",
+    "ipa": "/ˈfeɪ.ljɚ/",
+    "type": "n",
+    "meaning": "Sự thất bại",
+    "example": "Failure is a part of learning. (Thất bại là một phần của việc học hỏi.)"
+  },
+  {
+    "word": "Followed by",
+    "ipa": "/ˈfɑː.loʊd baɪ/",
+    "type": "phr",
+    "meaning": "Theo sau bởi",
+    "example": "Lunch will be followed by a short presentation. (Bữa trưa sẽ theo sau bởi một bài thuyết trình ngắn.)"
+  },
+  {
+    "word": "Interruption",
+    "ipa": "/ˌɪn.t̬əˈrʌp.ʃən/",
+    "type": "n",
+    "meaning": "Sự gián đoạn",
+    "example": "I worked all day without interruption. (Tôi đã làm việc cả ngày mà không bị gián đoạn.)"
+  },
+  {
+    "word": "Make sure",
+    "ipa": "/meɪk ʃʊr/",
+    "type": "phr",
+    "meaning": "Đảm bảo",
+    "example": "Make sure the door is locked. (Đảm bảo rằng cửa đã được khóa.)"
+  },
+  {
+    "word": "Mislabeled",
+    "ipa": "/ˌmɪsˈleɪ.bəld/",
+    "type": "adj",
+    "meaning": "Dán nhãn sai",
+    "example": "The package was mislabeled and sent to the wrong address. (Bưu kiện đã bị dán nhãn sai và gửi đến nhầm địa chỉ.)"
+  },
+  {
+    "word": "Observant",
+    "ipa": "/əbˈzɝː.vənt/",
+    "type": "adj",
+    "meaning": "Tinh mắt",
+    "example": "An observant guard noticed the open window. (Một người bảo vệ tinh mắt đã nhận ra cửa sổ đang mở.)"
+  },
+  {
+    "word": "Persuade",
+    "ipa": "/pɚˈsweɪd/",
+    "type": "v",
+    "meaning": "Thuyết phục",
+    "example": "I tried to persuade him to join us. (Tôi đã cố gắng thuyết phục anh ấy tham gia cùng chúng tôi.)"
+  },
+  {
+    "word": "Proposed",
+    "ipa": "/prəˈpoʊzd/",
+    "type": "adj",
+    "meaning": "Được đề xuất",
+    "example": "The proposed changes were rejected. (Những thay đổi được đề xuất đã bị bác bỏ.)"
+  },
+  {
+    "word": "Rephrase",
+    "ipa": "/ˌriːˈfreɪz/",
+    "type": "v",
+    "meaning": "Diễn đạt lại",
+    "example": "Could you rephrase your question? (Bạn có thể diễn đạt lại câu hỏi của mình không?)"
+  },
+  {
+    "word": "Concisely",
+    "ipa": "/kənˈsaɪs.li/",
+    "type": "adv",
+    "meaning": "Ngắn gọn",
+    "example": "Please state your points concisely. (Vui lòng trình bày các điểm của bạn một cách ngắn gọn.)"
+  },
+  {
+    "word": "Disapproval",
+    "ipa": "/ˌdɪs.əˈpruː.vəl/",
+    "type": "n",
+    "meaning": "Sự phản đối",
+    "example": "He shook his head in disapproval. (Anh ấy lắc đầu tỏ vẻ không tán thành.)"
+  },
+  {
+    "word": "Disapprove",
+    "ipa": "/ˌdɪs.əˈpruːv/",
+    "type": "v",
+    "meaning": "Không tán thành",
+    "example": "My parents disapprove of my choice. (Cha mẹ tôi không tán thành lựa chọn của tôi.)"
+  },
+  {
+    "word": "Do a favor",
+    "ipa": "/duː ə ˈfeɪ.vɚ/",
+    "type": "phr",
+    "meaning": "Giúp đỡ",
+    "example": "Can you do me a favor and carry this? (Bạn có thể giúp tôi một tay và mang cái này không?)"
+  },
+  {
+    "word": "Do a good job",
+    "ipa": "/duː ə ɡʊd dʒɑːb/",
+    "type": "phr",
+    "meaning": "Làm tốt",
+    "example": "You did a good job on the report. (Bạn đã làm rất tốt bản báo cáo.)"
+  },
+  {
+    "word": "Draw a distinction",
+    "ipa": "/drɑː ə dɪˈstɪŋk.ʃən/",
+    "type": "phr",
+    "meaning": "Chỉ ra sự khác biệt",
+    "example": "It's hard to draw a distinction between the two. (Thật khó để chỉ ra sự khác biệt giữa hai cái này.)"
+  },
+  {
+    "word": "Exposed",
+    "ipa": "/ɪkˈspoʊzd/",
+    "type": "adj",
+    "meaning": "Bị phơi bày",
+    "example": "The wires were exposed and dangerous. (Dây điện bị hở và rất nguy hiểm.)"
+  },
+  {
+    "word": "Intensive",
+    "ipa": "/ɪnˈten.sɪv/",
+    "type": "adj",
+    "meaning": "Chuyên sâu",
+    "example": "I took an intensive English course. (Tôi đã tham gia một khóa học tiếng Anh chuyên sâu.)"
+  },
+  {
+    "word": "Problematic",
+    "ipa": "/ˌprɑː.bləˈmæt̬.ɪk/",
+    "type": "adj",
+    "meaning": "Có vấn đề",
+    "example": "The situation is becoming problematic. (Tình hình đang trở nên có vấn đề/khó giải quyết.)"
+  },
+  {
+    "word": "Project coordinator",
+    "ipa": "/ˈprɑː.dʒekt koʊˈɔːr.dən.eɪ.t̬ɚ/",
+    "type": "phr",
+    "meaning": "Điều phối viên dự án",
+    "example": "She was hired as the project coordinator. (Cô ấy đã được thuê làm điều phối viên dự án.)"
+  },
+  {
+    "word": "Project management",
+    "ipa": "/ˈprɑː.dʒekt ˈmæn.ɪdʒ.mənt/",
+    "type": "phr",
+    "meaning": "Quản lý dự án",
+    "example": "Project management skills are essential. (Kỹ năng quản lý dự án là rất thiết yếu.)"
+  },
+  {
+    "word": "Seating capacity",
+    "ipa": "/ˈsiː.t̬ɪŋ kəˈpæs.ə.t̬i/",
+    "type": "phr",
+    "meaning": "Sức chứa chỗ ngồi",
+    "example": "The theater has a seating capacity of 500. (Rạp hát có sức chứa 500 chỗ ngồi.)"
+  },
+  {
+    "word": "Take care of",
+    "ipa": "/teɪk ker ʌv/",
+    "type": "phr",
+    "meaning": "Chăm sóc / Xử lý",
+    "example": "Who will take care of the cats? (Ai sẽ chăm sóc những con mèo?)"
+  },
+  {
+    "word": "Take on",
+    "ipa": "/teɪk ɑːn/",
+    "type": "phr",
+    "meaning": "Đảm nhận",
+    "example": "He decided to take on extra responsibilities. (Anh ấy đã quyết định đảm nhận thêm các trách nhiệm.)"
+  },
+  {
+    "word": "Tremendous",
+    "ipa": "/trɪˈmen.dəs/",
+    "type": "adj",
+    "meaning": "To lớn",
+    "example": "We had a tremendous amount of work. (Chúng tôi đã có một khối lượng công việc khổng lồ.)"
+  },
+  {
+    "word": "Under new management",
+    "ipa": "/ˈʌn.dɚ nuː ˈmæn.ɪdʒ.mənt/",
+    "type": "phr",
+    "meaning": "Dưới sự quản lý mới",
+    "example": "The restaurant is now under new management. (Nhà hàng hiện đang dưới sự quản lý mới.)"
+  },
+  {
+    "word": "Astute",
+    "ipa": "/əˈstuːt/",
+    "type": "adj",
+    "meaning": "Sắc sảo, tinh khôn",
+    "example": "He is an astute businessman. (Ông ấy là một doanh nhân sắc sảo.)"
+  },
+  {
+    "word": "Bring along",
+    "ipa": "/brɪŋ əˈlɑːŋ/",
+    "type": "phr",
+    "meaning": "Mang theo",
+    "example": "You can bring along a friend to the party. (Bạn có thể mang theo một người bạn đến bữa tiệc.)"
+  },
+  {
+    "word": "Compartment",
+    "ipa": "/kəmˈpɑːrt.mənt/",
+    "type": "n",
+    "meaning": "Ngăn, gian",
+    "example": "There is a small compartment in my bag. (Có một ngăn nhỏ trong túi của tôi.)"
+  },
+  {
+    "word": "Give way to",
+    "ipa": "/ɡɪv weɪ tuː/",
+    "type": "phr",
+    "meaning": "Nhường đường cho",
+    "example": "Cars must give way to pedestrians. (Xe ô tô phải nhường đường cho người đi bộ.)"
+  },
+  {
+    "word": "Overwork",
+    "ipa": "/ˌoʊ.vɚˈwɝːk/",
+    "type": "v",
+    "meaning": "Làm việc quá sức",
+    "example": "Don't overwork yourself this week. (Đừng làm việc quá sức vào tuần này nhé.)"
+  },
+  {
+    "word": "Put down",
+    "ipa": "/pʊt daʊn/",
+    "type": "phr",
+    "meaning": "Đặt xuống / Làm bẽ mặt",
+    "example": "Put down your pens, the time is up. (Hãy đặt bút xuống, hết giờ rồi.)"
+  },
+  {
+    "word": "Reach the solution",
+    "ipa": "/riːtʃ ðə səˈluː.ʃən/",
+    "type": "phr",
+    "meaning": "Tìm ra giải pháp",
+    "example": "We finally reached the solution after hours. (Cuối cùng chúng tôi đã tìm ra giải pháp sau nhiều giờ.)"
+  },
+  {
+    "word": "Recharge",
+    "ipa": "/riːˈtʃɑːrdʒ/",
+    "type": "v",
+    "meaning": "Nạp lại",
+    "example": "I need to recharge my phone battery. (Tôi cần nạp lại pin điện thoại của mình.)"
+  },
+  {
+    "word": "Smock",
+    "ipa": "/smɑːk/",
+    "type": "n",
+    "meaning": "Áo khoác ngoài",
+    "example": "The lab workers wear white smocks. (Các nhân viên phòng thí nghiệm mặc áo bờ lu trắng.)"
+  },
+  {
+    "word": "Accessibility",
+    "ipa": "/əkˌses.əˈbɪl.ə.t̬i/",
+    "type": "n",
+    "meaning": "Khả năng tiếp cận",
+    "example": "Web accessibility is important for everyone. (Khả năng tiếp cận web là quan trọng đối với mọi người.)"
+  },
+  {
+    "word": "Coordinator",
+    "ipa": "/koʊˈɔːr.dən.eɪ.t̬ɚ/",
+    "type": "n",
+    "meaning": "Điều phối viên",
+    "example": "Contact the event coordinator for details. (Hãy liên hệ với điều phối viên sự kiện để biết chi tiết.)"
+  },
+  {
+    "word": "Customary",
+    "ipa": "/ˈkʌs.tə.mer.i/",
+    "type": "adj",
+    "meaning": "Theo lệ thường",
+    "example": "It is customary to tip the waiter. (Theo lệ thường là nên đưa tiền boa cho bồi bàn.)"
+  },
+  {
+    "word": "Disrupt",
+    "ipa": "/dɪsˈrʌpt/",
+    "type": "v",
+    "meaning": "Làm gián đoạn",
+    "example": "Heavy rain disrupted the flight schedule. (Mưa lớn đã làm gián đoạn lịch trình chuyến bay.)"
+  },
+  {
+    "word": "Elevate",
+    "ipa": "/ˈel.ə.veɪt/",
+    "type": "v",
+    "meaning": "Nâng lên",
+    "example": "We need to elevate the brand image. (Chúng ta cần nâng cao hình ảnh thương hiệu.)"
+  },
+  {
+    "word": "Formality",
+    "ipa": "/fɔːrˈmæl.ə.t̬i/",
+    "type": "n",
+    "meaning": "Nghi thức",
+    "example": "The meeting was just a formality. (Cuộc họp chỉ là một nghi thức thôi.)"
+  },
+  {
+    "word": "Restraint",
+    "ipa": "/rɪˈstreɪnt/",
+    "type": "n",
+    "meaning": "Sự kiềm chế",
+    "example": "Show some restraint and don't get angry. (Hãy kiềm chế một chút và đừng nổi giận.)"
+  },
+  {
+    "word": "Sign out",
+    "ipa": "/saɪn aʊt/",
+    "type": "phr",
+    "meaning": "Đăng xuất / Ký tên ra về",
+    "example": "Don't forget to sign out before leaving. (Đừng quên ký tên ra về trước khi rời đi.)"
+  },
+  {
+    "word": "Undeniable",
+    "ipa": "/ˌʌn.dɪˈnaɪ.ə.bəl/",
+    "type": "adj",
+    "meaning": "Không thể phủ nhận",
+    "example": "It is an undeniable fact that the climate is changing. (Sự thật không thể phủ nhận là khí hậu đang thay đổi.)"
+  },
+  {
+    "word": "Violation",
+    "ipa": "/ˌvaɪ.əˈleɪ.ʃən/",
+    "type": "n",
+    "meaning": "Sự vi phạm",
+    "example": "That is a violation of international law. (Đó là một sự vi phạm luật pháp quốc tế.)"
+  },
+  {
+    "word": "Aggravate",
+    "ipa": "/ˈæɡ.rə.veɪt/",
+    "type": "v",
+    "meaning": "Làm trầm trọng thêm",
+    "example": "Scratching the wound will only aggravate it. (Gãi vào vết thương sẽ chỉ làm nó trầm trọng thêm thôi.)"
+  },
+  {
+    "word": "Contingency",
+    "ipa": "/kənˈtɪn.dʒən.si/",
+    "type": "n",
+    "meaning": "Sự ngẫu nhiên / Việc bất ngờ",
+    "example": "We have a contingency plan for emergencies. (Chúng tôi có một kế hoạch dự phòng cho các trường hợp khẩn cấp.)"
+  },
+  {
+    "word": "Draw the line at",
+    "ipa": "/drɑː ðə laɪn æt/",
+    "type": "phr",
+    "meaning": "Đặt ra giới hạn",
+    "example": "I'm okay with jokes, but I draw the line at insults. (Tôi đồng ý với các trò đùa, nhưng tôi đặt ra giới hạn với những lời xúc phạm.)"
+  },
+  {
+    "word": "Draw up",
+    "ipa": "/drɑː ʌp/",
+    "type": "phr",
+    "meaning": "Soạn thảo",
+    "example": "The lawyer will draw up the contract. (Luật sư sẽ soạn thảo hợp đồng.)"
+  },
+  {
+    "word": "Evacuate",
+    "ipa": "/ɪˈvæk.ju.eɪt/",
+    "type": "v",
+    "meaning": "Sơ tán",
+    "example": "They had to evacuate the building due to fire. (Họ đã phải sơ tán khỏi tòa nhà vì hỏa hoạn.)"
+  },
+  {
+    "word": "In commemoration of",
+    "ipa": "/ɪn kəˌmem.əˈreɪ.ʃən ʌv/",
+    "type": "phr",
+    "meaning": "Để kỷ niệm",
+    "example": "A statue was built in commemoration of the hero. (Một bức tượng đã được xây dựng để tưởng niệm người anh hùng.)"
+  },
+  {
+    "word": "On probation",
+    "ipa": "/ɑːn proʊˈbeɪ.ʃən/",
+    "type": "phr",
+    "meaning": "Trong thời gian thử việc",
+    "example": "New employees are on probation for three months. (Nhân viên mới sẽ trong thời gian thử việc ba tháng.)"
+  },
+  {
+    "word": "Overestimate",
+    "ipa": "/ˌoʊ.vɚˈes.tə.meɪt/",
+    "type": "v",
+    "meaning": "Đánh giá quá cao",
+    "example": "Don't overestimate your own strength. (Đừng đánh giá quá cao sức mạnh của chính mình.)"
+  },
+  {
+    "word": "Privilege",
+    "ipa": "/ˈprɪv.əl.ɪdʒ/",
+    "type": "n",
+    "meaning": "Đặc quyền",
+    "example": "It's a privilege to meet you. (Thật là một đặc ân/vinh dự được gặp bạn.)"
+  },
+  {
+    "word": "Restructure",
+    "ipa": "/ˌriːˈstrʌk.tʃɚ/",
+    "type": "v",
+    "meaning": "Tái cơ cấu",
+    "example": "The company needs to restructure its debt. (Công ty cần tái cơ cấu các khoản nợ của mình.)"
+  },
+  {
+    "word": "Segregate",
+    "ipa": "/ˈseɡ.rə.ɡeɪt/",
+    "type": "v",
+    "meaning": "Cách ly, tách riêng",
+    "example": "Waste should be segregated for recycling. (Rác thải nên được phân loại để tái chế.)"
+  },
+  {
+    "word": "Trigger",
+    "ipa": "/ˈtrɪɡ.ɚ/",
+    "type": "v",
+    "meaning": "Gây ra, kích hoạt",
+    "example": "Certain foods can trigger an allergy. (Một số loại thực phẩm có thể gây ra dị ứng.)"
+  },
+  {
+    "word": "Wary of",
+    "ipa": "/ˈwer.i ʌv/",
+    "type": "phr",
+    "meaning": "Cảnh giác với",
+    "example": "Be wary of strangers asking for money. (Hãy cảnh giác với những người lạ hỏi xin tiền.)"
+  }
+];
 
         const tbody = document.getElementById('vocabBody');
         const searchInput = document.getElementById('searchInput');
