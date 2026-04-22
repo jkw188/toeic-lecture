@@ -49,242 +49,1596 @@
     </div>
     <script>
         const vocabularyList = [
-            // --- MAIN WORDS ---
-            { word: "Collection", ipa: "/kəˈlek.ʃən/", type: "n", meaning: "Bộ sưu tập, sự thu thập", example: "A unique collection of stamps." },
-            { word: "Collect", ipa: "/kəˈlekt/", type: "v (der)", meaning: "Thu thập", example: "" },
-            { word: "Collector", ipa: "/kəˈlek.tɚ/", type: "n (der)", meaning: "Người sưu tầm", example: "" },
-            { word: "Collectable", ipa: "/kəˈlek.tə.bəl/", type: "n (der)", meaning: "Vật sưu tầm", example: "" },
-            { word: "Exhibition", ipa: "/ˌek.səˈbɪʃ.ən/", type: "n", meaning: "Cuộc triển lãm", example: "Hosted an exhibition of photographs." },
-            { word: "Exhibit", ipa: "/ɪɡˈzɪb.ɪt/", type: "v/n (der)", meaning: "Trưng bày / Vật trưng bày", example: "" },
-            { word: "Celebrity", ipa: "/səˈleb.rə.t̬i/", type: "n", meaning: "Người nổi tiếng", example: "Many celebrities attended the festival." },
-            { word: "Live", ipa: "/laɪv/", type: "adj", meaning: "Trực tiếp, sống", example: "A live music performance." },
-            { word: "Live", ipa: "/lɪv/", type: "v", meaning: "Sống", example: "" },
-            { word: "Living", ipa: "/ˈlɪv.ɪŋ/", type: "adj (der)", meaning: "Đang sống", example: "" },
-            { word: "Alive", ipa: "/əˈlaɪv/", type: "adj (syn)", meaning: "Còn sống", example: "" },
-            { word: "Improvise", ipa: "/ˈɪm.prə.vaɪz/", type: "v", meaning: "Ứng biến, ngẫu hứng", example: "Improvised a jazz melody." },
-            { word: "Improvisation", ipa: "/ɪmˌprɑː.vəˈzeɪ.ʃən/", type: "n (der)", meaning: "Sự ứng biến", example: "" },
-            { word: "Popular", ipa: "/ˈpɑː.pjə.lɚ/", type: "adj", meaning: "Nổi tiếng, phổ biến", example: "Musicals are so popular." },
-            { word: "Popularity", ipa: "/ˌpɑː.pjəˈler.ə.t̬i/", type: "n (der)", meaning: "Sự phổ biến", example: "" },
-            { word: "Likable", ipa: "/ˈlaɪ.kə.bəl/", type: "adj (syn)", meaning: "Dễ mến", example: "" },
-            { word: "Preferred", ipa: "/prɪˈfɝːd/", type: "adj (syn)", meaning: "Được ưa thích hơn", example: "" },
-            { word: "Favorite", ipa: "/ˈfeɪ.vər.ɪt/", type: "adj (syn)", meaning: "Yêu thích nhất", example: "" },
-            { word: "Donation", ipa: "/doʊˈneɪ.ʃən/", type: "n", meaning: "Sự quyên góp", example: "Accepting donations of books." },
-            { word: "Donate", ipa: "/ˈdoʊ.neɪt/", type: "v (der)", meaning: "Quyên góp", example: "" },
-            { word: "Donor", ipa: "/ˈdoʊ.nɚ/", type: "n (der)", meaning: "Người quyên góp", example: "" },
-            { word: "Contribution", ipa: "/ˌkɑːn.trɪˈbjuː.ʃən/", type: "n (syn)", meaning: "Sự đóng góp", example: "" },
-            { word: "Alumni", ipa: "/əˈlʌm.naɪ/", type: "n", meaning: "Cựu sinh viên", example: "Alumni were invited to the ceremony." },
-            { word: "Present", ipa: "/prɪˈzent/", type: "v", meaning: "Trình bày, xuất trình", example: "Please present valid tickets." },
-            { word: "Present", ipa: "/ˈprez.ənt/", type: "adj/n", meaning: "Hiện tại / Quà tặng", example: "" },
-            { word: "Presentation", ipa: "/ˌprez.ənˈteɪ.ʃən/", type: "n (der)", meaning: "Bài thuyết trình", example: "" },
-            { word: "Presenter", ipa: "/prɪˈzen.t̬ɚ/", type: "n (der)", meaning: "Diễn giả", example: "" },
-            { word: "Presently", ipa: "/ˈprez.ənt.li/", type: "adv (der)", meaning: "Hiện thời", example: "" },
-            { word: "Admission", ipa: "/ədˈmɪʃ.ən/", type: "n", meaning: "Sự vào cửa, phí vào cửa", example: "Charged an extra admission fee." },
-            { word: "Admit", ipa: "/ədˈmɪt/", type: "v (der)", meaning: "Nhận vào / Thú nhận", example: "" },
-            { word: "Banquet", ipa: "/ˈbæŋ.kwət/", type: "n", meaning: "Bữa tiệc lớn", example: "Wedding banquets." },
-            { word: "Anniversary", ipa: "/ˌæn.əˈvɝː.sɚ.i/", type: "n", meaning: "Lễ kỷ niệm", example: "Celebrated their 50th anniversary." },
-            { word: "Required", ipa: "/rɪˈkwaɪrd/", type: "adj", meaning: "Cần thiết, bắt buộc", example: "Proper attire is required." },
-            { word: "Succeed", ipa: "/səkˈsiːd/", type: "v", meaning: "Thành công / Kế nhiệm", example: "Succeeded in convincing her family." },
-            { word: "Success", ipa: "/səkˈses/", type: "n (der)", meaning: "Sự thành công", example: "" },
-            { word: "Successful", ipa: "/səkˈses.fəl/", type: "adj (der)", meaning: "Thành công", example: "" },
-            { word: "Successive", ipa: "/səkˈses.ɪv/", type: "adj (der)", meaning: "Liên tiếp", example: "" },
-            { word: "Rest", ipa: "/rest/", type: "v", meaning: "Nghỉ ngơi", example: "Rest on the bench." },
-            { word: "Rest", ipa: "/rest/", type: "n", meaning: "Sự nghỉ ngơi / Phần còn lại", example: "" },
-            { word: "Remainder", ipa: "/rɪˈmeɪn.dɚ/", type: "n (syn)", meaning: "Phần còn lại", example: "" },
-            { word: "Fund-raising", ipa: "/ˈfʌndˌreɪ.zɪŋ/", type: "n", meaning: "Hoạt động gây quỹ", example: "Auctions are a form of fund-raising." },
-            { word: "Resume", ipa: "/rɪˈzuːm/", type: "v", meaning: "Bắt đầu lại, tiếp tục", example: "The play will resume." },
-            { word: "Issue", ipa: "/ˈɪʃ.uː/", type: "n", meaning: "Số báo / Vấn đề", example: "In the April issue." },
-            { word: "Issue", ipa: "/ˈɪʃ.uː/", type: "v", meaning: "Phát hành", example: "" },
-            { word: "Edition", ipa: "/ɪˈdɪʃ.ən/", type: "n (syn)", meaning: "Lần xuất bản", example: "" },
-            { word: "Subscription", ipa: "/səbˈskrɪp.ʃən/", type: "n", meaning: "Sự đăng ký, đặt mua", example: "Get a subscription to the magazine." },
-            { word: "Subscribe", ipa: "/səbˈskraɪb/", type: "v (der)", meaning: "Đăng ký", example: "" },
-            { word: "Appear", ipa: "/əˈpɪr/", type: "v", meaning: "Xuất hiện", example: "Appeared at the bookstore." },
-            { word: "Appearance", ipa: "/əˈpɪr.əns/", type: "n (der)", meaning: "Sự xuất hiện / Vẻ ngoài", example: "" },
-            { word: "Disappear", ipa: "/ˌdɪs.əˈpɪr/", type: "v (ant)", meaning: "Biến mất", example: "" },
-            { word: "Accompany", ipa: "/əˈkʌm.pə.ni/", type: "v", meaning: "Đi cùng, kèm theo", example: "Accompanied her grandmother." },
-            { word: "Edition", ipa: "/ɪˈdɪʃ.ən/", type: "n", meaning: "Phiên bản, lần in", example: "A revised edition." },
-            { word: "Specifically", ipa: "/spəˈsɪf.ɪ.kəl.i/", type: "adv", meaning: "Cụ thể, đặc trưng", example: "Specifically stated." },
-            { word: "Anonymous", ipa: "/əˈnɑː.nə.məs/", type: "adj", meaning: "Ẩn danh, nặc danh", example: "An anonymous donor." },
-            { word: "Commit", ipa: "/kəˈmɪt/", type: "v", meaning: "Cam kết, tận tâm", example: "Committed to providing excellent service." },
-            { word: "Commitment", ipa: "/kəˈmɪt.mənt/", type: "n (der)", meaning: "Sự cam kết", example: "" },
-            { word: "Dedicate", ipa: "/ˈded.ə.keɪt/", type: "v (syn)", meaning: "Cống hiến", example: "" },
-            { word: "Devote", ipa: "/dɪˈvoʊt/", type: "v (syn)", meaning: "Cống hiến", example: "" },
-            { word: "Informative", ipa: "/ɪnˈfɔːr.mə.t̬ɪv/", type: "adj", meaning: "Nhiều thông tin, bổ ích", example: "The documentary was informative." },
-            { word: "Inform", ipa: "/ɪnˈfɔːrm/", type: "v (der)", meaning: "Thông báo", example: "" },
-            { word: "Informed", ipa: "/ɪnˈfɔːrmd/", type: "adj (der)", meaning: "Có hiểu biết", example: "" },
-            { word: "Information", ipa: "/ˌɪn.fɚˈmeɪ.ʃən/", type: "n (der)", meaning: "Thông tin", example: "" },
-            { word: "Audience", ipa: "/ˈɑː.di.əns/", type: "n", meaning: "Khán giả", example: "The audience applauded." },
-            { word: "Author", ipa: "/ˈɑː.θɚ/", type: "n", meaning: "Tác giả", example: "All of the author's stories." },
-            { word: "Note", ipa: "/noʊt/", type: "v", meaning: "Lưu ý, ghi chú", example: "Please note the details." },
-            { word: "Notable", ipa: "/ˈnoʊ.t̬ə.bəl/", type: "adj (der)", meaning: "Đáng chú ý", example: "" },
-            { word: "State", ipa: "/steɪt/", type: "v (syn)", meaning: "Phát biểu", example: "" },
-            { word: "Antique", ipa: "/ænˈtiːk/", type: "n", meaning: "Đồ cổ", example: "Antiques are popular for decor." },
-            { word: "Manuscript", ipa: "/ˈmæn.jə.skrɪpt/", type: "n", meaning: "Bản thảo", example: "Working on several manuscripts." },
-            { word: "Beneficial", ipa: "/ˌben.əˈfɪʃ.əl/", type: "adj", meaning: "Có lợi", example: "Beneficial to the community." },
-            { word: "Benefit", ipa: "/ˈben.ə.fɪt/", type: "n (der)", meaning: "Lợi ích", example: "" },
-            { word: "Harmful", ipa: "/ˈhɑːrm.fəl/", type: "adj (ant)", meaning: "Có hại", example: "" },
-            { word: "Upcoming", ipa: "/ˈʌpˌkʌm.ɪŋ/", type: "adj", meaning: "Sắp tới", example: "Upcoming election." },
-            { word: "Forthcoming", ipa: "/ˌfɔːrθˈkʌm.ɪŋ/", type: "adj (syn)", meaning: "Sắp tới", example: "" },
-            { word: "Lend", ipa: "/lend/", type: "v", meaning: "Cho mượn", example: "The library lends materials." },
-            { word: "Borrow", ipa: "/ˈbɑːr.oʊ/", type: "v (syn)", meaning: "Mượn", example: "" },
-            { word: "Rent", ipa: "/rent/", type: "v (syn)", meaning: "Thuê", example: "" },
-            { word: "Current", ipa: "/ˈkɝː.ənt/", type: "adj", meaning: "Hiện tại, hiện hành", example: "Current subscribers." },
-            { word: "Currently", ipa: "/ˈkɝː.ənt.li/", type: "adv (der)", meaning: "Hiện thời", example: "" },
-            { word: "Present", ipa: "/ˈprez.ənt/", type: "adj (syn)", meaning: "Hiện tại", example: "" },
-            { word: "Valid", ipa: "/ˈvæl.ɪd/", type: "adj (syn)", meaning: "Có hiệu lực", example: "" },
-            { word: "Local", ipa: "/ˈloʊ.kəl/", type: "adj", meaning: "Địa phương", example: "Local high school." },
-            { word: "Locality", ipa: "/loʊˈkæl.ə.t̬i/", type: "n (der)", meaning: "Vị trí", example: "" },
-            { word: "Locally", ipa: "/ˈloʊ.kəl.i/", type: "adv (der)", meaning: "Tại địa phương", example: "" },
-            { word: "Variety", ipa: "/vəˈraɪ.ə.t̬i/", type: "n", meaning: "Sự đa dạng", example: "A variety of magazines." },
-            { word: "Various", ipa: "/ˈver.i.əs/", type: "adj (der)", meaning: "Khác nhau", example: "" },
-            { word: "Vary", ipa: "/ˈver.i/", type: "v (der)", meaning: "Thay đổi", example: "" },
-            { word: "Range", ipa: "/reɪndʒ/", type: "n (syn)", meaning: "Loại / Phạm vi", example: "" },
-            { word: "Advocate", ipa: "/ˈæd.və.kət/", type: "n", meaning: "Người ủng hộ", example: "An advocate of public education." },
-            { word: "Advocate", ipa: "/ˈæd.və.keɪt/", type: "v", meaning: "Ủng hộ", example: "" },
-            { word: "Opponent", ipa: "/əˈpoʊ.nənt/", type: "n (ant)", meaning: "Đối thủ", example: "" },
-            { word: "Contributor", ipa: "/kənˈtrɪb.ju.t̬ɚ/", type: "n", meaning: "Người đóng góp", example: "A regular contributor." },
-            { word: "Contribute", ipa: "/kənˈtrɪb.juːt/", type: "v (der)", meaning: "Đóng góp", example: "" },
-            { word: "Contribution", ipa: "/ˌkɑːn.trɪˈbjuː.ʃən/", type: "n (der)", meaning: "Sự đóng góp", example: "" },
-            { word: "Defy", ipa: "/dɪˈfaɪ/", type: "v", meaning: "Thách thức, không tuân theo", example: "Defies conventional wisdom." },
-            { word: "Defiance", ipa: "/dɪˈfaɪ.əns/", type: "n (der)", meaning: "Sự thách thức", example: "" },
-            { word: "Fascinating", ipa: "/ˈfæs.ən.eɪ.tɪŋ/", type: "adj", meaning: "Hấp dẫn, lôi cuốn", example: "Fascinating pieces of art." },
-            { word: "Fascinate", ipa: "/ˈfæs.ən.eɪt/", type: "v (der)", meaning: "Mê hoặc", example: "" },
-            { word: "Fascination", ipa: "/ˌfæs.ənˈeɪ.ʃən/", type: "n (der)", meaning: "Sự quyến rũ", example: "" },
-            { word: "Showing", ipa: "/ˈʃoʊ.ɪŋ/", type: "n", meaning: "Buổi trình diễn, công chiếu", example: "Premiere showing." },
-
-            // --- BASIC & EXTRAS ---
-            { word: "Backpack", ipa: "/ˈbæk.pæk/", type: "n", meaning: "Ba lô", example: "" },
-            { word: "Bike", ipa: "/baɪk/", type: "n", meaning: "Xe đạp", example: "" },
-            { word: "Cabin", ipa: "/ˈkæb.ɪn/", type: "n", meaning: "Buồng lái / Nhà gỗ", example: "" },
-            { word: "Climb a mountain", ipa: "", type: "phr", meaning: "Leo núi", example: "" },
-            { word: "Film festival", ipa: "", type: "phr", meaning: "Liên hoan phim", example: "" },
-            { word: "Fishing", ipa: "/ˈfɪʃ.ɪŋ/", type: "n", meaning: "Câu cá", example: "" },
-            { word: "Gallery", ipa: "/ˈɡæl.ɚ.i/", type: "n", meaning: "Phòng trưng bày", example: "" },
-            { word: "Invitation", ipa: "/ˌɪn.vəˈteɪ.ʃən/", type: "n", meaning: "Lời mời", example: "" },
-            { word: "Lawn", ipa: "/lɑːn/", type: "n", meaning: "Bãi cỏ", example: "" },
-            { word: "Paint", ipa: "/peɪnt/", type: "v", meaning: "Sơn, vẽ", example: "" },
-            { word: "Painting", ipa: "/ˈpeɪn.tɪŋ/", type: "n", meaning: "Bức tranh", example: "" },
-            { word: "Play cards", ipa: "", type: "phr", meaning: "Chơi bài", example: "" },
-            { word: "Public library", ipa: "", type: "phr", meaning: "Thư viện công cộng", example: "" },
-            { word: "Race", ipa: "/reɪs/", type: "n/v", meaning: "Cuộc đua / Đua", example: "" },
-            { word: "Resort", ipa: "/rɪˈzɔːrt/", type: "n", meaning: "Khu nghỉ dưỡng", example: "" },
-            { word: "Theater", ipa: "/ˈθiː.ə.t̬ɚ/", type: "n", meaning: "Nhà hát", example: "" },
-            { word: "Watch a film", ipa: "", type: "phr", meaning: "Xem phim", example: "" },
-            { word: "Adventure", ipa: "/ədˈven.tʃɚ/", type: "n", meaning: "Cuộc phiêu lưu", example: "" },
-            { word: "Art museum", ipa: "", type: "phr", meaning: "Bảo tàng nghệ thuật", example: "" },
-            { word: "Begin", ipa: "/bɪˈɡɪn/", type: "v", meaning: "Bắt đầu", example: "" },
-            { word: "Bring", ipa: "/brɪŋ/", type: "v", meaning: "Mang theo", example: "" },
-            { word: "Care for", ipa: "", type: "phr", meaning: "Chăm sóc / Thích", example: "" },
-            { word: "Concert", ipa: "/ˈkɑːn.sɚt/", type: "n", meaning: "Buổi hòa nhạc", example: "" },
-            { word: "Length", ipa: "/leŋθ/", type: "n", meaning: "Chiều dài", example: "" },
-            { word: "Leisure", ipa: "/ˈliː.ʒɚ/", type: "n", meaning: "Thời gian rảnh", example: "" },
-            { word: "Librarian", ipa: "/laɪˈbrer.i.ən/", type: "n", meaning: "Thủ thư", example: "" },
-            { word: "Menu", ipa: "/ˈmen.juː/", type: "n", meaning: "Thực đơn", example: "" },
-            { word: "Sightseeing", ipa: "/ˈsaɪtˌsiː.ɪŋ/", type: "n", meaning: "Tham quan", example: "" },
-            
-            // --- 800 WORDS ---
-            { word: "Amusement park", ipa: "/əˈmjuːz.mənt ˌpɑːrk/", type: "n", meaning: "Công viên giải trí", example: "" },
-            { word: "Ancient history", ipa: "", type: "phr", meaning: "Lịch sử cổ đại", example: "" },
-            { word: "Artifact", ipa: "/ˈɑːr.t̬ə.fækt/", type: "n", meaning: "Đồ tạo tác", example: "" },
-            { word: "Auditorium", ipa: "/ˌɑː.dəˈtɔːr.i.əm/", type: "n", meaning: "Khán phòng", example: "" },
-            { word: "Be booked up", ipa: "", type: "phr", meaning: "Được đặt hết", example: "" },
-            { word: "Box office", ipa: "/ˈbɑːks ˌɑː.fɪs/", type: "n", meaning: "Phòng vé", example: "" },
-            { word: "Cheerful", ipa: "/ˈtʃɪr.fəl/", type: "adj", meaning: "Vui vẻ", example: "" },
-            { word: "Choir", ipa: "/kwaɪ.ɚ/", type: "n", meaning: "Dàn hợp xướng", example: "" },
-            { word: "Entertain", ipa: "/en.t̬ɚˈteɪn/", type: "v", meaning: "Giải trí / Chiêu đãi", example: "" },
-            { word: "Flower arrangement", ipa: "", type: "phr", meaning: "Cắm hoa", example: "" },
-            { word: "Flower bed", ipa: "", type: "phr", meaning: "Luống hoa", example: "" },
-            { word: "Go to a film", ipa: "", type: "phr", meaning: "Đi xem phim", example: "" },
-            { word: "Grip", ipa: "/ɡrɪp/", type: "v", meaning: "Nắm chặt", example: "" },
-            { word: "Have a race", ipa: "", type: "phr", meaning: "Chạy đua", example: "" },
-            { word: "Jog", ipa: "/dʒɑːɡ/", type: "v", meaning: "Chạy bộ", example: "" },
-            { word: "Musical instrument", ipa: "", type: "phr", meaning: "Nhạc cụ", example: "" },
-            { word: "Oar", ipa: "/ɔːr/", type: "n", meaning: "Mái chèo", example: "" },
-            { word: "Oil painting", ipa: "", type: "phr", meaning: "Tranh sơn dầu", example: "" },
-            { word: "Outdoor", ipa: "/ˈaʊtˌdɔːr/", type: "adj", meaning: "Ngoài trời", example: "" },
-            { word: "Paddle", ipa: "/ˈpæd.əl/", type: "n/v", meaning: "Mái chèo / Chèo", example: "" },
-            { word: "Premiere", ipa: "/prɪˈmɪr/", type: "n", meaning: "Buổi ra mắt", example: "" },
-            { word: "Rake leaves", ipa: "", type: "phr", meaning: "Cào lá", example: "" },
-            { word: "Recreational activity", ipa: "", type: "phr", meaning: "Hoạt động giải trí", example: "" },
-            { word: "Right", ipa: "/raɪt/", type: "n", meaning: "Quyền / Lẽ phải", example: "" },
-            { word: "Running time", ipa: "", type: "phr", meaning: "Thời lượng", example: "" },
-            { word: "Sail a boat", ipa: "", type: "phr", meaning: "Chèo thuyền", example: "" },
-            { word: "Slide down", ipa: "", type: "phr", meaning: "Trượt xuống", example: "" },
-            { word: "Splash", ipa: "/splæʃ/", type: "v", meaning: "Bắn tung tóe", example: "" },
-            { word: "Sport tournament", ipa: "", type: "phr", meaning: "Giải đấu thể thao", example: "" },
-            { word: "Stadium", ipa: "/ˈsteɪ.di.əm/", type: "n", meaning: "Sân vận động", example: "" },
-            { word: "Stroll", ipa: "/stroʊl/", type: "v", meaning: "Đi dạo", example: "" },
-            { word: "Stay up", ipa: "", type: "phr", meaning: "Thức khuya", example: "" },
-            { word: "Take a break", ipa: "", type: "phr", meaning: "Nghỉ ngơi", example: "" },
-            { word: "Take a walk", ipa: "", type: "phr", meaning: "Đi dạo", example: "" },
-            { word: "Take a photograph", ipa: "", type: "phr", meaning: "Chụp ảnh", example: "" },
-            { word: "Take great pleasure", ipa: "", type: "phr", meaning: "Thích thú", example: "" },
-            { word: "Touch up", ipa: "", type: "phr", meaning: "Chỉnh sửa (ảnh)", example: "" },
-            { word: "Vacation package", ipa: "", type: "phr", meaning: "Gói du lịch", example: "" },
-            { word: "Wait for seats", ipa: "", type: "phr", meaning: "Chờ chỗ ngồi", example: "" },
-            { word: "Wait in line", ipa: "", type: "phr", meaning: "Xếp hàng", example: "" },
-            { word: "Water the plants", ipa: "", type: "phr", meaning: "Tưới cây", example: "" },
-            { word: "Amuse", ipa: "/əˈmjuːz/", type: "v", meaning: "Làm vui vẻ", example: "" },
-            { word: "Artistic", ipa: "/ɑːrˈtɪs.tɪk/", type: "adj", meaning: "Có tính nghệ thuật", example: "" },
-            { word: "Donate", ipa: "/ˈdoʊ.neɪt/", type: "v", meaning: "Quyên góp", example: "" },
-            { word: "Even though", ipa: "", type: "phr", meaning: "Mặc dù", example: "" },
-            { word: "Exhibit", ipa: "/ɪɡˈzɪb.ɪt/", type: "v", meaning: "Triển lãm", example: "" },
-            { word: "Exist", ipa: "/ɪɡˈzɪst/", type: "v", meaning: "Tồn tại", example: "" },
-            { word: "Free admission", ipa: "", type: "phr", meaning: "Miễn phí vào cửa", example: "" },
-            { word: "Make oneself at home", ipa: "", type: "phr", meaning: "Cứ tự nhiên", example: "" },
-            { word: "Municipal", ipa: "/mjuːˈnɪs.ə.pəl/", type: "adj", meaning: "Thuộc thành phố", example: "" },
-            { word: "Several", ipa: "/ˈsev.ɚ.əl/", type: "adj", meaning: "Một vài", example: "" },
-            { word: "Spectator", ipa: "/spekˈteɪ.t̬ɚ/", type: "n", meaning: "Khán giả", example: "" },
-            { word: "Usher", ipa: "/ˈʌʃ.ɚ/", type: "n", meaning: "Người chỉ chỗ", example: "" },
-            { word: "Win a contest", ipa: "", type: "phr", meaning: "Thắng cuộc thi", example: "" },
-            { word: "Admission to", ipa: "", type: "phr", meaning: "Được nhận vào", example: "" },
-            { word: "Contestant", ipa: "/kənˈtes.tənt/", type: "n", meaning: "Thí sinh", example: "" },
-            { word: "Delight", ipa: "/dɪˈlaɪt/", type: "n", meaning: "Sự vui sướng", example: "" },
-            { word: "Do one's hair", ipa: "", type: "phr", meaning: "Làm tóc", example: "" },
-            { word: "Enjoyable", ipa: "/ɪnˈdʒɔɪ.ə.bəl/", type: "adj", meaning: "Thú vị", example: "" },
-            { word: "Group rate", ipa: "", type: "phr", meaning: "Giá nhóm", example: "" },
-            { word: "Head for", ipa: "", type: "phr", meaning: "Đi về phía", example: "" },
-            { word: "Out of order", ipa: "", type: "phr", meaning: "Hỏng", example: "" },
-            { word: "Periodical", ipa: "/ˌpɪr.iˈɑː.dɪ.kəl/", type: "n", meaning: "Tạp chí định kỳ", example: "" },
-            { word: "Playing field", ipa: "", type: "phr", meaning: "Sân chơi", example: "" },
-            { word: "Register for", ipa: "", type: "phr", meaning: "Đăng ký", example: "" },
-            { word: "Show up", ipa: "", type: "phr", meaning: "Xuất hiện", example: "" },
-            { word: "Take a tour", ipa: "", type: "phr", meaning: "Đi tham quan", example: "" },
-            
-            // --- 900 WORDS ---
-            { word: "Be in line", ipa: "", type: "phr", meaning: "Xếp hàng", example: "" },
-            { word: "For a change", ipa: "", type: "phr", meaning: "Để thay đổi không khí", example: "" },
-            { word: "Pass the time", ipa: "", type: "phr", meaning: "Giết thời gian", example: "" },
-            { word: "Pose", ipa: "/poʊz/", type: "v", meaning: "Tạo dáng", example: "" },
-            { word: "Stay tuned", ipa: "", type: "phr", meaning: "Tiếp tục theo dõi", example: "" },
-            { word: "Vacate", ipa: "/veɪˈkeɪt/", type: "v", meaning: "Bỏ trống / Rời khỏi", example: "" },
-            { word: "Appreciative", ipa: "/əˈpriː.ʃə.tɪv/", type: "adj", meaning: "Biết thưởng thức", example: "" },
-            { word: "Casually", ipa: "/ˈkæʒ.u.ə.li/", type: "adv", meaning: "Tình cờ", example: "" },
-            { word: "Enlightening", ipa: "/ɪnˈlaɪ.t̬ən.ɪŋ/", type: "adj", meaning: "Khai sáng", example: "" },
-            { word: "Enthusiastically", ipa: "/ɪnˌθuː.ziˈæs.tɪ.kəl.i/", type: "adv", meaning: "Nhiệt tình", example: "" },
-            { word: "Excellence", ipa: "/ˈek.səl.əns/", type: "n", meaning: "Sự xuất sắc", example: "" },
-            { word: "Excursion", ipa: "/ɪkˈskɝː.ʃən/", type: "n", meaning: "Chuyến tham quan", example: "" },
-            { word: "Festivity", ipa: "/fesˈtɪv.ə.t̬i/", type: "n", meaning: "Lễ hội", example: "" },
-            { word: "Flock", ipa: "/flɑːk/", type: "n/v", meaning: "Đám đông / Tụ tập", example: "" },
-            { word: "Intriguingly", ipa: "/ɪnˈtriː.ɡɪŋ.li/", type: "adv", meaning: "Thú vị, tò mò", example: "" },
-            { word: "Leg room", ipa: "", type: "phr", meaning: "Chỗ để chân", example: "" },
-            { word: "Mural", ipa: "/ˈmjʊr.əl/", type: "n", meaning: "Tranh tường", example: "" },
-            { word: "Portrait", ipa: "/ˈpɔːr.trɪt/", type: "n", meaning: "Chân dung", example: "" },
-            { word: "Publication", ipa: "/ˌpʌb.ləˈkeɪ.ʃən/", type: "n", meaning: "Ấn phẩm", example: "" },
-            { word: "Sculpture", ipa: "/ˈskʌlp.tʃɚ/", type: "n", meaning: "Điêu khắc", example: "" },
-            { word: "Transferable", ipa: "/trænsˈfɝː.ə.bəl/", type: "adj", meaning: "Có thể chuyển nhượng", example: "" },
-            { word: "Unsanitary", ipa: "/ʌnˈsæn.ə.ter.i/", type: "adj", meaning: "Mất vệ sinh", example: "" },
-            { word: "Be in the mood for", ipa: "", type: "phr", meaning: "Có hứng thú với", example: "" },
-            { word: "Botanical garden", ipa: "", type: "phr", meaning: "Vườn bách thảo", example: "" },
-            { word: "Censorship", ipa: "/ˈsen.sɚ.ʃɪp/", type: "n", meaning: "Sự kiểm duyệt", example: "" },
-            { word: "Have yet to", ipa: "", type: "phr", meaning: "Vẫn chưa", example: "" },
-            { word: "Intermission", ipa: "/ˌɪn.t̬ɚˈmɪʃ.ən/", type: "n", meaning: "Giờ giải lao", example: "" },
-            { word: "Memoirs", ipa: "/ˈmem.wɑːrz/", type: "n", meaning: "Hồi ký", example: "" },
-            { word: "Must-see", ipa: "", type: "phr", meaning: "Đáng xem", example: "" },
-            { word: "Rally", ipa: "/ˈræl.i/", type: "n", meaning: "Đại hội / Tập hợp", example: "" },
-            { word: "Ridiculous", ipa: "/rɪˈdɪk.jə.ləs/", type: "adj", meaning: "Lố bịch", example: "" },
-            { word: "Roam around", ipa: "", type: "phr", meaning: "Đi lang thang", example: "" }
-        ];
-
+  {
+    "word": "Collection",
+    "ipa": "/kəˈlek.ʃən/",
+    "type": "n",
+    "meaning": "Bộ sưu tập, sự thu thập",
+    "example": "A unique collection of stamps. (Một bộ sưu tập tem độc đáo.)"
+  },
+  {
+    "word": "Collect",
+    "ipa": "/kəˈlekt/",
+    "type": "v (der)",
+    "meaning": "Thu thập",
+    "example": "They collect rare coins from around the world. (Họ thu thập những đồng xu hiếm từ khắp nơi trên thế giới.)"
+  },
+  {
+    "word": "Collector",
+    "ipa": "/kəˈlek.tɚ/",
+    "type": "n (der)",
+    "meaning": "Người sưu tầm",
+    "example": "The art collector bought a famous painting. (Nhà sưu tầm nghệ thuật đã mua một bức tranh nổi tiếng.)"
+  },
+  {
+    "word": "Collectable",
+    "ipa": "/kəˈlek.tə.bəl/",
+    "type": "n (der)",
+    "meaning": "Vật sưu tầm",
+    "example": "Comic books can be valuable collectables. (Truyện tranh có thể là những vật sưu tầm có giá trị.)"
+  },
+  {
+    "word": "Exhibition",
+    "ipa": "/ˌek.səˈbɪʃ.ən/",
+    "type": "n",
+    "meaning": "Cuộc triển lãm",
+    "example": "Hosted an exhibition of photographs. (Tổ chức một cuộc triển lãm ảnh.)"
+  },
+  {
+    "word": "Exhibit",
+    "ipa": "/ɪɡˈzɪb.ɪt/",
+    "type": "v/n (der)",
+    "meaning": "Trưng bày / Vật trưng bày",
+    "example": "The local museum will exhibit her work. (Bảo tàng địa phương sẽ trưng bày tác phẩm của cô ấy.)"
+  },
+  {
+    "word": "Celebrity",
+    "ipa": "/səˈleb.rə.t̬i/",
+    "type": "n",
+    "meaning": "Người nổi tiếng",
+    "example": "Many celebrities attended the festival. (Nhiều người nổi tiếng đã tham dự lễ hội.)"
+  },
+  {
+    "word": "Live",
+    "ipa": "/laɪv/",
+    "type": "adj",
+    "meaning": "Trực tiếp, sống",
+    "example": "A live music performance. (Một buổi biểu diễn ca nhạc trực tiếp.)"
+  },
+  {
+    "word": "Live",
+    "ipa": "/lɪv/",
+    "type": "v",
+    "meaning": "Sống",
+    "example": "They live in a large house near the city. (Họ sống trong một ngôi nhà lớn gần thành phố.)"
+  },
+  {
+    "word": "Living",
+    "ipa": "/ˈlɪv.ɪŋ/",
+    "type": "adj (der)",
+    "meaning": "Đang sống",
+    "example": "She is the oldest living person in the village. (Bà ấy là người cao tuổi nhất còn sống trong làng.)"
+  },
+  {
+    "word": "Alive",
+    "ipa": "/əˈlaɪv/",
+    "type": "adj (syn)",
+    "meaning": "Còn sống",
+    "example": "The injured hiker was found alive. (Người đi bộ bị thương đã được tìm thấy khi còn sống.)"
+  },
+  {
+    "word": "Improvise",
+    "ipa": "/ˈɪm.prə.vaɪz/",
+    "type": "v",
+    "meaning": "Ứng biến, ngẫu hứng",
+    "example": "Improvised a jazz melody. (Ngẫu hứng một giai điệu jazz.)"
+  },
+  {
+    "word": "Improvisation",
+    "ipa": "/ɪmˌprɑː.vəˈzeɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự ứng biến",
+    "example": "The play was a result of long improvisation. (Vở kịch là kết quả của một sự ứng biến dài.)"
+  },
+  {
+    "word": "Popular",
+    "ipa": "/ˈpɑː.pjə.lɚ/",
+    "type": "adj",
+    "meaning": "Nổi tiếng, phổ biến",
+    "example": "Musicals are so popular. (Nhạc kịch rất phổ biến.)"
+  },
+  {
+    "word": "Popularity",
+    "ipa": "/ˌpɑː.pjəˈler.ə.t̬i/",
+    "type": "n (der)",
+    "meaning": "Sự phổ biến",
+    "example": "The popularity of the actor skyrocketed. (Sự phổ biến của nam diễn viên đã tăng vọt.)"
+  },
+  {
+    "word": "Likable",
+    "ipa": "/ˈlaɪ.kə.bəl/",
+    "type": "adj (syn)",
+    "meaning": "Dễ mến",
+    "example": "He has a very likable and friendly character. (Anh ấy có một tính cách rất dễ mến và thân thiện.)"
+  },
+  {
+    "word": "Preferred",
+    "ipa": "/prɪˈfɝːd/",
+    "type": "adj (syn)",
+    "meaning": "Được ưa thích hơn",
+    "example": "Morning is my preferred time to exercise. (Buổi sáng là thời gian ưa thích hơn của tôi để tập thể dục.)"
+  },
+  {
+    "word": "Favorite",
+    "ipa": "/ˈfeɪ.vər.ɪt/",
+    "type": "adj (syn)",
+    "meaning": "Yêu thích nhất",
+    "example": "Vanilla is her favorite flavor. (Vani là hương vị yêu thích nhất của cô ấy.)"
+  },
+  {
+    "word": "Donation",
+    "ipa": "/doʊˈneɪ.ʃən/",
+    "type": "n",
+    "meaning": "Sự quyên góp",
+    "example": "Accepting donations of books. (Chấp nhận quyên góp sách.)"
+  },
+  {
+    "word": "Donate",
+    "ipa": "/ˈdoʊ.neɪt/",
+    "type": "v (der)",
+    "meaning": "Quyên góp",
+    "example": "They donate money to the animal shelter. (Họ quyên góp tiền cho trạm cứu hộ động vật.)"
+  },
+  {
+    "word": "Donor",
+    "ipa": "/ˈdoʊ.nɚ/",
+    "type": "n (der)",
+    "meaning": "Người quyên góp",
+    "example": "The donor wished to remain anonymous. (Người quyên góp muốn được ẩn danh.)"
+  },
+  {
+    "word": "Contribution",
+    "ipa": "/ˌkɑːn.trɪˈbjuː.ʃən/",
+    "type": "n (syn)",
+    "meaning": "Sự đóng góp",
+    "example": "His contribution to the project was vital. (Sự đóng góp của anh ấy cho dự án là rất quan trọng.)"
+  },
+  {
+    "word": "Alumni",
+    "ipa": "/əˈlʌm.naɪ/",
+    "type": "n",
+    "meaning": "Cựu sinh viên",
+    "example": "Alumni were invited to the ceremony. (Các cựu sinh viên đã được mời đến buổi lễ.)"
+  },
+  {
+    "word": "Present",
+    "ipa": "/prɪˈzent/",
+    "type": "v",
+    "meaning": "Trình bày, xuất trình",
+    "example": "Please present valid tickets. (Vui lòng xuất trình vé hợp lệ.)"
+  },
+  {
+    "word": "Present",
+    "ipa": "/ˈprez.ənt/",
+    "type": "adj/n",
+    "meaning": "Hiện tại / Quà tặng",
+    "example": "He gave me a beautiful birthday present. (Anh ấy đã tặng tôi một món quà sinh nhật đẹp.)"
+  },
+  {
+    "word": "Presentation",
+    "ipa": "/ˌprez.ənˈteɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Bài thuyết trình",
+    "example": "Her presentation was clear and professional. (Bài thuyết trình của cô ấy rõ ràng và chuyên nghiệp.)"
+  },
+  {
+    "word": "Presenter",
+    "ipa": "/prɪˈzen.t̬ɚ/",
+    "type": "n (der)",
+    "meaning": "Diễn giả",
+    "example": "The presenter shared some useful tips. (Diễn giả đã chia sẻ một số mẹo hữu ích.)"
+  },
+  {
+    "word": "Presently",
+    "ipa": "/ˈprez.ənt.li/",
+    "type": "adv (der)",
+    "meaning": "Hiện thời",
+    "example": "He is presently unavailable for a meeting. (Hiện thời anh ấy không thể tham gia cuộc họp.)"
+  },
+  {
+    "word": "Admission",
+    "ipa": "/ədˈmɪʃ.ən/",
+    "type": "n",
+    "meaning": "Sự vào cửa, phí vào cửa",
+    "example": "Charged an extra admission fee. (Tính thêm một khoản phí vào cửa bổ sung.)"
+  },
+  {
+    "word": "Admit",
+    "ipa": "/ədˈmɪt/",
+    "type": "v (der)",
+    "meaning": "Nhận vào / Thú nhận",
+    "example": "He admitted making a mistake in the report. (Anh ấy đã thú nhận đã mắc lỗi trong báo cáo.)"
+  },
+  {
+    "word": "Banquet",
+    "ipa": "/ˈbæŋ.kwət/",
+    "type": "n",
+    "meaning": "Bữa tiệc lớn",
+    "example": "Wedding banquets are often very formal. (Các bữa tiệc cưới lớn thường rất trang trọng.)"
+  },
+  {
+    "word": "Anniversary",
+    "ipa": "/ˌæn.əˈvɝː.sɚ.i/",
+    "type": "n",
+    "meaning": "Lễ kỷ niệm",
+    "example": "Celebrated their 50th anniversary. (Kỷ niệm 50 năm ngày cưới của họ.)"
+  },
+  {
+    "word": "Required",
+    "ipa": "/rɪˈkwaɪrd/",
+    "type": "adj",
+    "meaning": "Cần thiết, bắt buộc",
+    "example": "Proper attire is required. (Trang phục chỉnh tề là bắt buộc.)"
+  },
+  {
+    "word": "Succeed",
+    "ipa": "/səkˈsiːd/",
+    "type": "v",
+    "meaning": "Thành công / Kế nhiệm",
+    "example": "Succeeded in convincing her family. (Đã thành công trong việc thuyết phục gia đình cô ấy.)"
+  },
+  {
+    "word": "Success",
+    "ipa": "/səkˈses/",
+    "type": "n (der)",
+    "meaning": "Sự thành công",
+    "example": "The company has achieved great success. (Công ty đã đạt được thành công lớn.)"
+  },
+  {
+    "word": "Successful",
+    "ipa": "/səkˈses.fəl/",
+    "type": "adj (der)",
+    "meaning": "Thành công",
+    "example": "She is a very successful entrepreneur. (Cô ấy là một doanh nhân rất thành công.)"
+  },
+  {
+    "word": "Successive",
+    "ipa": "/səkˈses.ɪv/",
+    "type": "adj (der)",
+    "meaning": "Liên tiếp",
+    "example": "Victory came after three successive losses. (Chiến thắng đã đến sau ba trận thua liên tiếp.)"
+  },
+  {
+    "word": "Rest",
+    "ipa": "/rest/",
+    "type": "v",
+    "meaning": "Nghỉ ngơi",
+    "example": "Rest on the bench. (Nghỉ ngơi trên ghế băng.)"
+  },
+  {
+    "word": "Rest",
+    "ipa": "/rest/",
+    "type": "n",
+    "meaning": "Sự nghỉ ngơi / Phần còn lại",
+    "example": "You need a good night's rest. (Bạn cần một đêm nghỉ ngơi tốt.)"
+  },
+  {
+    "word": "Remainder",
+    "ipa": "/rɪˈmeɪn.dɚ/",
+    "type": "n (syn)",
+    "meaning": "Phần còn lại",
+    "example": "I will spend the remainder of the day relaxing. (Tôi sẽ dành phần còn lại của ngày để thư giãn.)"
+  },
+  {
+    "word": "Fund-raising",
+    "ipa": "/ˈfʌndˌreɪ.zɪŋ/",
+    "type": "n",
+    "meaning": "Hoạt động gây quỹ",
+    "example": "Auctions are a form of fund-raising. (Đấu giá là một hình thức gây quỹ.)"
+  },
+  {
+    "word": "Resume",
+    "ipa": "/rɪˈzuːm/",
+    "type": "v",
+    "meaning": "Bắt đầu lại, tiếp tục",
+    "example": "The play will resume. (Vở kịch sẽ được tiếp tục.)"
+  },
+  {
+    "word": "Issue",
+    "ipa": "/ˈɪʃ.uː/",
+    "type": "n",
+    "meaning": "Số báo / Vấn đề",
+    "example": "In the April issue. (Trong số báo tháng Tư.)"
+  },
+  {
+    "word": "Issue",
+    "ipa": "/ˈɪʃ.uː/",
+    "type": "v",
+    "meaning": "Phát hành",
+    "example": "The bank issued a new credit card. (Ngân hàng đã phát hành một chiếc thẻ tín dụng mới.)"
+  },
+  {
+    "word": "Edition",
+    "ipa": "/ɪˈdɪʃ.ən/",
+    "type": "n (syn)",
+    "meaning": "Lần xuất bản",
+    "example": "This is the second edition of the textbook. (Đây là lần xuất bản thứ hai của cuốn sách giáo khoa.)"
+  },
+  {
+    "word": "Subscription",
+    "ipa": "/səbˈskrɪp.ʃən/",
+    "type": "n",
+    "meaning": "Sự đăng ký, đặt mua",
+    "example": "Get a subscription to the magazine. (Đăng ký đặt mua tạp chí.)"
+  },
+  {
+    "word": "Subscribe",
+    "ipa": "/səbˈskraɪb/",
+    "type": "v (der)",
+    "meaning": "Đăng ký",
+    "example": "I subscribe to many tech blogs. (Tôi đăng ký theo dõi nhiều blog công nghệ.)"
+  },
+  {
+    "word": "Appear",
+    "ipa": "/əˈpɪr/",
+    "type": "v",
+    "meaning": "Xuất hiện",
+    "example": "Appeared at the bookstore. (Đã xuất hiện tại hiệu sách.)"
+  },
+  {
+    "word": "Appearance",
+    "ipa": "/əˈpɪr.əns/",
+    "type": "n (der)",
+    "meaning": "Sự xuất hiện / Vẻ ngoài",
+    "example": "Her sudden appearance surprised everyone. (Sự xuất hiện đột ngột của cô ấy đã làm mọi người ngạc nhiên.)"
+  },
+  {
+    "word": "Disappear",
+    "ipa": "/ˌdɪs.əˈpɪr/",
+    "type": "v (ant)",
+    "meaning": "Biến mất",
+    "example": "The snow will disappear when the sun comes out. (Tuyết sẽ biến mất khi mặt trời hiện ra.)"
+  },
+  {
+    "word": "Accompany",
+    "ipa": "/əˈkʌm.pə.ni/",
+    "type": "v",
+    "meaning": "Đi cùng, kèm theo",
+    "example": "Accompanied her grandmother. (Đã đi cùng bà của cô ấy.)"
+  },
+  {
+    "word": "Edition",
+    "ipa": "/ɪˈdɪʃ.ən/",
+    "type": "n",
+    "meaning": "Phiên bản, lần in",
+    "example": "A revised edition. (Một phiên bản đã được sửa đổi.)"
+  },
+  {
+    "word": "Specifically",
+    "ipa": "/spəˈsɪf.ɪ.kəl.i/",
+    "type": "adv",
+    "meaning": "Cụ thể, đặc trưng",
+    "example": "Specifically stated. (Được nêu rõ cụ thể.)"
+  },
+  {
+    "word": "Anonymous",
+    "ipa": "/əˈnɑː.nə.məs/",
+    "type": "adj",
+    "meaning": "Ẩn danh, nặc danh",
+    "example": "An anonymous donor. (Một người quyên góp ẩn danh.)"
+  },
+  {
+    "word": "Commit",
+    "ipa": "/kəˈmɪt/",
+    "type": "v",
+    "meaning": "Cam kết, tận tâm",
+    "example": "Committed to providing excellent service. (Cam kết cung cấp dịch vụ xuất sắc.)"
+  },
+  {
+    "word": "Commitment",
+    "ipa": "/kəˈmɪt.mənt/",
+    "type": "n (der)",
+    "meaning": "Sự cam kết",
+    "example": "Working here requires a strong commitment. (Làm việc ở đây đòi hỏi một sự cam kết mạnh mẽ.)"
+  },
+  {
+    "word": "Dedicate",
+    "ipa": "/ˈded.ə.keɪt/",
+    "type": "v (syn)",
+    "meaning": "Cống hiến",
+    "example": "He dedicated his life to helping the poor. (Anh ấy đã cống hiến đời mình để giúp đỡ người nghèo.)"
+  },
+  {
+    "word": "Devote",
+    "ipa": "/dɪˈvoʊt/",
+    "type": "v (syn)",
+    "meaning": "Cống hiến",
+    "example": "They devote a lot of time to training. (Họ cống hiến rất nhiều thời gian cho việc luyện tập.)"
+  },
+  {
+    "word": "Informative",
+    "ipa": "/ɪnˈfɔːr.mə.t̬ɪv/",
+    "type": "adj",
+    "meaning": "Nhiều thông tin, bổ ích",
+    "example": "The documentary was informative. (Bộ phim tài liệu này rất bổ ích.)"
+  },
+  {
+    "word": "Inform",
+    "ipa": "/ɪnˈfɔːrm/",
+    "type": "v (der)",
+    "meaning": "Thông báo",
+    "example": "Please inform us of your decision. (Vui lòng thông báo cho chúng tôi về quyết định của bạn.)"
+  },
+  {
+    "word": "Informed",
+    "ipa": "/ɪnˈfɔːrmd/",
+    "type": "adj (der)",
+    "meaning": "Có hiểu biết",
+    "example": "Keep me informed about the progress. (Hãy giữ cho tôi luôn được biết về tiến độ.)"
+  },
+  {
+    "word": "Information",
+    "ipa": "/ˌɪn.fɚˈmeɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Thông tin",
+    "example": "I found some useful information online. (Tôi đã tìm thấy một số thông tin hữu ích trên mạng.)"
+  },
+  {
+    "word": "Audience",
+    "ipa": "/ˈɑː.di.əns/",
+    "type": "n",
+    "meaning": "Khán giả",
+    "example": "The audience applauded. (Khán giả đã vỗ tay khen ngợi.)"
+  },
+  {
+    "word": "Author",
+    "ipa": "/ˈɑː.θɚ/",
+    "type": "n",
+    "meaning": "Tác giả",
+    "example": "All of the author's stories. (Tất cả những câu chuyện của tác giả.)"
+  },
+  {
+    "word": "Note",
+    "ipa": "/noʊt/",
+    "type": "v",
+    "meaning": "Lưu ý, ghi chú",
+    "example": "Please note the details. (Vui lòng lưu ý các chi tiết.)"
+  },
+  {
+    "word": "Notable",
+    "ipa": "/ˈnoʊ.t̬ə.bəl/",
+    "type": "adj (der)",
+    "meaning": "Đáng chú ý",
+    "example": "Paris is notable for its historic landmarks. (Paris đáng chú ý vì các danh lam thắng cảnh lịch sử của nó.)"
+  },
+  {
+    "word": "State",
+    "ipa": "/steɪt/",
+    "type": "v (syn)",
+    "meaning": "Phát biểu",
+    "example": "The witness stated what happened. (Nhân chứng đã phát biểu điều gì đã xảy ra.)"
+  },
+  {
+    "word": "Antique",
+    "ipa": "/ænˈtiːk/",
+    "type": "n",
+    "meaning": "Đồ cổ",
+    "example": "Antiques are popular for decor. (Đồ cổ rất phổ biến để trang trí.)"
+  },
+  {
+    "word": "Manuscript",
+    "ipa": "/ˈmæn.jə.skrɪpt/",
+    "type": "n",
+    "meaning": "Bản thảo",
+    "example": "Working on several manuscripts. (Đang thực hiện một vài bản thảo.)"
+  },
+  {
+    "word": "Beneficial",
+    "ipa": "/ˌben.əˈfɪʃ.əl/",
+    "type": "adj",
+    "meaning": "Có lợi",
+    "example": "Beneficial to the community. (Có lợi cho cộng đồng.)"
+  },
+  {
+    "word": "Benefit",
+    "ipa": "/ˈben.ə.fɪt/",
+    "type": "n (der)",
+    "meaning": "Lợi ích",
+    "example": "Swimming provides many health benefits. (Bơi lội mang lại nhiều lợi ích cho sức khỏe.)"
+  },
+  {
+    "word": "Harmful",
+    "ipa": "/ˈhɑːrm.fəl/",
+    "type": "adj (ant)",
+    "meaning": "Có hại",
+    "example": "Excessive sugar is harmful to teeth. (Đường quá mức có hại cho răng.)"
+  },
+  {
+    "word": "Upcoming",
+    "ipa": "/ˈʌpˌkʌm.ɪŋ/",
+    "type": "adj",
+    "meaning": "Sắp tới",
+    "example": "Upcoming election. (Cuộc bầu cử sắp tới.)"
+  },
+  {
+    "word": "Forthcoming",
+    "ipa": "/ˌfɔːrθˈkʌm.ɪŋ/",
+    "type": "adj (syn)",
+    "meaning": "Sắp tới",
+    "example": "Information about the forthcoming trip is available. (Thông tin về chuyến đi sắp tới đã có sẵn.)"
+  },
+  {
+    "word": "Lend",
+    "ipa": "/lend/",
+    "type": "v",
+    "meaning": "Cho mượn",
+    "example": "The library lends materials. (Thư viện cho mượn tài liệu.)"
+  },
+  {
+    "word": "Borrow",
+    "ipa": "/ˈbɑːr.oʊ/",
+    "type": "v (syn)",
+    "meaning": "Mượn",
+    "example": "He borrowed a book from me yesterday. (Hôm qua anh ấy đã mượn tôi một cuốn sách.)"
+  },
+  {
+    "word": "Rent",
+    "ipa": "/rent/",
+    "type": "v (syn)",
+    "meaning": "Thuê",
+    "example": "They rent an apartment in the city. (Họ thuê một căn hộ trong thành phố.)"
+  },
+  {
+    "word": "Current",
+    "ipa": "/ˈkɝː.ənt/",
+    "type": "adj",
+    "meaning": "Hiện tại, hiện hành",
+    "example": "Current subscribers. (Những người đang đăng ký hiện tại.)"
+  },
+  {
+    "word": "Currently",
+    "ipa": "/ˈkɝː.ənt.li/",
+    "type": "adv (der)",
+    "meaning": "Hiện thời",
+    "example": "She is currently studying for her exams. (Hiện thời cô ấy đang học cho kỳ thi.)"
+  },
+  {
+    "word": "Present",
+    "ipa": "/ˈprez.ənt/",
+    "type": "adj (syn)",
+    "meaning": "Hiện tại",
+    "example": "The present situation is difficult. (Tình hình hiện tại rất khó khăn.)"
+  },
+  {
+    "word": "Valid",
+    "ipa": "/ˈvæl.ɪd/",
+    "type": "adj (syn)",
+    "meaning": "Có hiệu lực",
+    "example": "This passport is still valid. (Hộ chiếu này vẫn còn hiệu lực.)"
+  },
+  {
+    "word": "Local",
+    "ipa": "/ˈloʊ.kəl/",
+    "type": "adj",
+    "meaning": "Địa phương",
+    "example": "Local high school. (Trường cấp ba địa phương.)"
+  },
+  {
+    "word": "Locality",
+    "ipa": "/loʊˈkæl.ə.t̬i/",
+    "type": "n (der)",
+    "meaning": "Vị trí",
+    "example": "The locality is very quiet at night. (Vị trí này rất yên tĩnh vào ban đêm.)"
+  },
+  {
+    "word": "Locally",
+    "ipa": "/ˈloʊ.kəl.i/",
+    "type": "adv (der)",
+    "meaning": "Tại địa phương",
+    "example": "The vegetables are grown locally. (Rau củ được trồng tại địa phương.)"
+  },
+  {
+    "word": "Variety",
+    "ipa": "/vəˈraɪ.ə.t̬i/",
+    "type": "n",
+    "meaning": "Sự đa dạng",
+    "example": "A variety of magazines. (Nhiều loại tạp chí đa dạng.)"
+  },
+  {
+    "word": "Various",
+    "ipa": "/ˈver.i.əs/",
+    "type": "adj (der)",
+    "meaning": "Khác nhau",
+    "example": "We have various options to choose from. (Chúng tôi có các tùy chọn khác nhau để chọn.)"
+  },
+  {
+    "word": "Vary",
+    "ipa": "/ˈver.i/",
+    "type": "v (der)",
+    "meaning": "Thay đổi",
+    "example": "Temperatures vary during the day. (Nhiệt độ thay đổi trong suốt cả ngày.)"
+  },
+  {
+    "word": "Range",
+    "ipa": "/reɪndʒ/",
+    "type": "n (syn)",
+    "meaning": "Loại / Phạm vi",
+    "example": "They offer a range of different flavors. (Họ cung cấp một loại/phạm vi các hương vị khác nhau.)"
+  },
+  {
+    "word": "Advocate",
+    "ipa": "/ˈæd.və.kət/",
+    "type": "n",
+    "meaning": "Người ủng hộ",
+    "example": "An advocate of public education. (Người ủng hộ giáo dục công lập.)"
+  },
+  {
+    "word": "Advocate",
+    "ipa": "/ˈæd.və.keɪt/",
+    "type": "v",
+    "meaning": "Ủng hộ",
+    "example": "She advocates for better healthcare. (Cô ấy ủng hộ cho dịch vụ chăm sóc sức khỏe tốt hơn.)"
+  },
+  {
+    "word": "Opponent",
+    "ipa": "/əˈpoʊ.nənt/",
+    "type": "n (ant)",
+    "meaning": "Đối thủ",
+    "example": "The wrestler pinned his opponent. (Đô vật đã đè chặt đối thủ của mình.)"
+  },
+  {
+    "word": "Contributor",
+    "ipa": "/kənˈtrɪb.ju.t̬ɚ/",
+    "type": "n",
+    "meaning": "Người đóng góp",
+    "example": "A regular contributor. (Một người đóng góp thường xuyên.)"
+  },
+  {
+    "word": "Contribute",
+    "ipa": "/kənˈtrɪb.juːt/",
+    "type": "v (der)",
+    "meaning": "Đóng góp",
+    "example": "Many factors contribute to global warming. (Nhiều yếu tố đóng góp vào sự nóng lên toàn cầu.)"
+  },
+  {
+    "word": "Contribution",
+    "ipa": "/ˌkɑːn.trɪˈbjuː.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự đóng góp",
+    "example": "His contribution was highly valued. (Sự đóng góp của anh ấy đã được đánh giá cao.)"
+  },
+  {
+    "word": "Defy",
+    "ipa": "/dɪˈfaɪ/",
+    "type": "v",
+    "meaning": "Thách thức, không tuân theo",
+    "example": "Defies conventional wisdom. (Thách thức những quan niệm thông thường.)"
+  },
+  {
+    "word": "Defiance",
+    "ipa": "/dɪˈfaɪ.əns/",
+    "type": "n (der)",
+    "meaning": "Sự thách thức",
+    "example": "The boy showed defiance toward his teacher. (Cậu bé đã thể hiện sự thách thức đối với giáo viên của mình.)"
+  },
+  {
+    "word": "Fascinating",
+    "ipa": "/ˈfæs.ən.eɪ.tɪŋ/",
+    "type": "adj",
+    "meaning": "Hấp dẫn, lôi cuốn",
+    "example": "Fascinating pieces of art. (Những tác phẩm nghệ thuật hấp dẫn.)"
+  },
+  {
+    "word": "Fascinate",
+    "ipa": "/ˈfæs.ən.eɪt/",
+    "type": "v (der)",
+    "meaning": "Mê hoặc",
+    "example": "Ancient ruins fascinate archaeologists. (Những tàn tích cổ xưa mê hoặc các nhà khảo cổ học.)"
+  },
+  {
+    "word": "Fascination",
+    "ipa": "/ˌfæs.ənˈeɪ.ʃən/",
+    "type": "n (der)",
+    "meaning": "Sự quyến rũ",
+    "example": "Her fascination with stars began in childhood. (Sự quyến rũ của những vì sao đối với cô ấy bắt đầu từ thời thơ ấu.)"
+  },
+  {
+    "word": "Showing",
+    "ipa": "/ˈʃoʊ.ɪŋ/",
+    "type": "n",
+    "meaning": "Buổi trình diễn, công chiếu",
+    "example": "Premiere showing. (Buổi công chiếu ra mắt.)"
+  },
+  {
+    "word": "Backpack",
+    "ipa": "/ˈbæk.pæk/",
+    "type": "n",
+    "meaning": "Ba lô",
+    "example": "He carried a heavy backpack. (Anh ấy đã mang một chiếc ba lô nặng.)"
+  },
+  {
+    "word": "Bike",
+    "ipa": "/baɪk/",
+    "type": "n",
+    "meaning": "Xe đạp",
+    "example": "She rode her bike to the park. (Cô ấy đã đạp xe đến công viên.)"
+  },
+  {
+    "word": "Cabin",
+    "ipa": "/ˈkæb.ɪn/",
+    "type": "n",
+    "meaning": "Buồng lái / Nhà gỗ",
+    "example": "The pilot entered the cabin. (Phi công đã bước vào buồng lái.)"
+  },
+  {
+    "word": "Climb a mountain",
+    "ipa": "/ˈklaɪm ə ˈmaʊn.tən/",
+    "type": "phr",
+    "meaning": "Leo núi",
+    "example": "They want to climb a mountain this summer. (Họ muốn leo núi vào mùa hè này.)"
+  },
+  {
+    "word": "Film festival",
+    "ipa": "/ˈfɪlm ˌfes.tə.vəl/",
+    "type": "phr",
+    "meaning": "Liên hoan phim",
+    "example": "The city hosts an annual film festival. (Thành phố tổ chức một liên hoan phim hàng năm.)"
+  },
+  {
+    "word": "Fishing",
+    "ipa": "/ˈfɪʃ.ɪŋ/",
+    "type": "n",
+    "meaning": "Câu cá",
+    "example": "Fishing is a relaxing hobby. (Câu cá là một sở thích thư giãn.)"
+  },
+  {
+    "word": "Gallery",
+    "ipa": "/ˈɡæl.ɚ.i/",
+    "type": "n",
+    "meaning": "Phòng trưng bày",
+    "example": "The gallery features modern art. (Phòng trưng bày giới thiệu nghệ thuật hiện đại.)"
+  },
+  {
+    "word": "Invitation",
+    "ipa": "/ˌɪn.vəˈteɪ.ʃən/",
+    "type": "n",
+    "meaning": "Lời mời",
+    "example": "I received an invitation to the wedding. (Tôi đã nhận được một lời mời đến đám cưới.)"
+  },
+  {
+    "word": "Lawn",
+    "ipa": "/lɑːn/",
+    "type": "n",
+    "meaning": "Bãi cỏ",
+    "example": "The green lawn was well-kept. (Bãi cỏ xanh được chăm sóc tốt.)"
+  },
+  {
+    "word": "Paint",
+    "ipa": "/peɪnt/",
+    "type": "v",
+    "meaning": "Sơn, vẽ",
+    "example": "He likes to paint landscapes. (Anh ấy thích vẽ phong cảnh.)"
+  },
+  {
+    "word": "Painting",
+    "ipa": "/ˈpeɪn.tɪŋ/",
+    "type": "n",
+    "meaning": "Bức tranh",
+    "example": "That painting is worth a lot of money. (Bức tranh đó đáng giá rất nhiều tiền.)"
+  },
+  {
+    "word": "Play cards",
+    "ipa": "/ˈpleɪ ˈkɑːrdz/",
+    "type": "phr",
+    "meaning": "Chơi bài",
+    "example": "They play cards every Friday night. (Họ chơi bài vào mỗi tối thứ Sáu.)"
+  },
+  {
+    "word": "Public library",
+    "ipa": "/ˌpʌb.lɪk ˈlaɪ.brer.i/",
+    "type": "phr",
+    "meaning": "Thư viện công cộng",
+    "example": "The public library is a great resource. (Thư viện công cộng là một nguồn tài nguyên tuyệt vời.)"
+  },
+  {
+    "word": "Race",
+    "ipa": "/reɪs/",
+    "type": "n/v",
+    "meaning": "Cuộc đua / Đua",
+    "example": "He won the 100-meter race. (Anh ấy đã thắng cuộc đua 100 mét.)"
+  },
+  {
+    "word": "Resort",
+    "ipa": "/rɪˈzɔːrt/",
+    "type": "n",
+    "meaning": "Khu nghỉ dưỡng",
+    "example": "We stayed at a luxury resort. (Chúng tôi đã ở tại một khu nghỉ dưỡng sang trọng.)"
+  },
+  {
+    "word": "Theater",
+    "ipa": "/ˈθiː.ə.t̬ɚ/",
+    "type": "n",
+    "meaning": "Nhà hát",
+    "example": "Let's go to the movie theater. (Hãy đến rạp chiếu phim.)"
+  },
+  {
+    "word": "Watch a film",
+    "ipa": "/ˈwɑːtʃ ə ˈfɪlm/",
+    "type": "phr",
+    "meaning": "Xem phim",
+    "example": "I like to watch a film before bed. (Tôi thích xem một bộ phim trước khi đi ngủ.)"
+  },
+  {
+    "word": "Adventure",
+    "ipa": "/ədˈven.tʃɚ/",
+    "type": "n",
+    "meaning": "Cuộc phiêu lưu",
+    "example": "The trip was a big adventure. (Chuyến đi là một cuộc phiêu lưu lớn.)"
+  },
+  {
+    "word": "Art museum",
+    "ipa": "/ˈɑːrt mjuːˌziː.əm/",
+    "type": "phr",
+    "meaning": "Bảo tàng nghệ thuật",
+    "example": "We visited the local art museum. (Chúng tôi đã đến thăm bảo tàng nghệ thuật địa phương.)"
+  },
+  {
+    "word": "Begin",
+    "ipa": "/bɪˈɡɪn/",
+    "type": "v",
+    "meaning": "Bắt đầu",
+    "example": "The class will begin at 9 AM. (Lớp học sẽ bắt đầu lúc 9 giờ sáng.)"
+  },
+  {
+    "word": "Bring",
+    "ipa": "/brɪŋ/",
+    "type": "v",
+    "meaning": "Mang theo",
+    "example": "Please bring your laptop to the meeting. (Vui lòng mang theo máy tính xách tay đến cuộc họp.)"
+  },
+  {
+    "word": "Care for",
+    "ipa": "/ˈker fɔːr/",
+    "type": "phr",
+    "meaning": "Chăm sóc / Thích",
+    "example": "She cares for her elderly parents. (Cô ấy chăm sóc cha mẹ già của mình.)"
+  },
+  {
+    "word": "Concert",
+    "ipa": "/ˈkɑːn.sɚt/",
+    "type": "n",
+    "meaning": "Buổi hòa nhạc",
+    "example": "The rock concert was very loud. (Buổi hòa nhạc rock rất lớn.)"
+  },
+  {
+    "word": "Length",
+    "ipa": "/leŋθ/",
+    "type": "n",
+    "meaning": "Chiều dài",
+    "example": "Check the length of the string. (Kiểm tra chiều dài của sợi dây.)"
+  },
+  {
+    "word": "Leisure",
+    "ipa": "/ˈliː.ʒɚ/",
+    "type": "n",
+    "meaning": "Thời gian rảnh",
+    "example": "He spent his leisure reading books. (Anh ấy dành thời gian rảnh của mình để đọc sách.)"
+  },
+  {
+    "word": "Librarian",
+    "ipa": "/laɪˈbrer.i.ən/",
+    "type": "n",
+    "meaning": "Thủ thư",
+    "example": "The librarian helped me find the book. (Thủ thư đã giúp tôi tìm cuốn sách.)"
+  },
+  {
+    "word": "Menu",
+    "ipa": "/ˈmen.juː/",
+    "type": "n",
+    "meaning": "Thực đơn",
+    "example": "Is there anything vegetarian on the menu? (Có món gì chay trong thực đơn không?)"
+  },
+  {
+    "word": "Sightseeing",
+    "ipa": "/ˈsaɪtˌsiː.ɪŋ/",
+    "type": "n",
+    "meaning": "Tham quan",
+    "example": "They spent the day sightseeing in Rome. (Họ dành cả ngày để tham quan ở Rome.)"
+  },
+  {
+    "word": "Amusement park",
+    "ipa": "/əˈmjuːz.mənt ˌpɑːrk/",
+    "type": "n",
+    "meaning": "Công viên giải trí",
+    "example": "The kids were excited to go to the amusement park. (Lũ trẻ rất hào hứng khi được đi công viên giải trí.)"
+  },
+  {
+    "word": "Ancient history",
+    "ipa": "/ˌeɪn.ʃənt ˈhɪs.t̬ɚ.i/",
+    "type": "phr",
+    "meaning": "Lịch sử cổ đại",
+    "example": "He is an expert in ancient history. (Ông ấy là một chuyên gia về lịch sử cổ đại.)"
+  },
+  {
+    "word": "Artifact",
+    "ipa": "/ˈɑːr.t̬ə.fækt/",
+    "type": "n",
+    "meaning": "Đồ tạo tác",
+    "example": "The museum displays many ancient artifacts. (Bảo tàng trưng bày nhiều đồ tạo tác cổ xưa.)"
+  },
+  {
+    "word": "Auditorium",
+    "ipa": "/ˌɑː.dəˈtɔːr.i.əm/",
+    "type": "n",
+    "meaning": "Khán phòng",
+    "example": "The lecture was held in the auditorium. (Bài giảng được tổ chức trong khán phòng.)"
+  },
+  {
+    "word": "Be booked up",
+    "ipa": "/bi ˈbʊkt ʌp/",
+    "type": "phr",
+    "meaning": "Được đặt hết",
+    "example": "The restaurant is booked up tonight. (Nhà hàng đã được đặt hết chỗ tối nay.)"
+  },
+  {
+    "word": "Box office",
+    "ipa": "/ˈbɑːks ˌɑː.fɪs/",
+    "type": "n",
+    "meaning": "Phòng vé",
+    "example": "The movie was a huge hit at the box office. (Bộ phim là một cú hích lớn tại phòng vé.)"
+  },
+  {
+    "word": "Cheerful",
+    "ipa": "/ˈtʃɪr.fəl/",
+    "type": "adj",
+    "meaning": "Vui vẻ",
+    "example": "She has a cheerful disposition. (Cô ấy có một tâm tính vui vẻ.)"
+  },
+  {
+    "word": "Choir",
+    "ipa": "/kwaɪ.ɚ/",
+    "type": "n",
+    "meaning": "Dàn hợp xướng",
+    "example": "The choir practiced for the concert. (Dàn hợp xướng đã luyện tập cho buổi hòa nhạc.)"
+  },
+  {
+    "word": "Entertain",
+    "ipa": "/en.t̬ɚˈteɪn/",
+    "type": "v",
+    "meaning": "Giải trí / Chiêu đãi",
+    "example": "They love to entertain guests at home. (Họ thích chiêu đãi khách tại nhà.)"
+  },
+  {
+    "word": "Flower arrangement",
+    "ipa": "/ˈflaʊ.ɚ əˌreɪndʒ.mənt/",
+    "type": "phr",
+    "meaning": "Cắm hoa",
+    "example": "The flower arrangement was beautiful. (Sự cắm hoa thật là đẹp.)"
+  },
+  {
+    "word": "Flower bed",
+    "ipa": "/ˈflaʊ.ɚ bed/",
+    "type": "phr",
+    "meaning": "Luống hoa",
+    "example": "She planted roses in the flower bed. (Cô ấy đã trồng hoa hồng trong luống hoa.)"
+  },
+  {
+    "word": "Go to a film",
+    "ipa": "/ˈɡoʊ tuː ə ˈfɪlm/",
+    "type": "phr",
+    "meaning": "Đi xem phim",
+    "example": "Do you want to go to a film later? (Bạn có muốn đi xem phim một lát nữa không?)"
+  },
+  {
+    "word": "Grip",
+    "ipa": "/ɡrɪp/",
+    "type": "v",
+    "meaning": "Nắm chặt",
+    "example": "He gripped the bat and waited for the pitch. (Anh ấy nắm chặt cây gậy và chờ cú ném.)"
+  },
+  {
+    "word": "Have a race",
+    "ipa": "/ˈhæv ə ˈreɪs/",
+    "type": "phr",
+    "meaning": "Chạy đua",
+    "example": "Let's have a race to the corner. (Hãy chạy đua đến góc phố kia đi.)"
+  },
+  {
+    "word": "Jog",
+    "ipa": "/dʒɑːɡ/",
+    "type": "v",
+    "meaning": "Chạy bộ",
+    "example": "I try to jog three times a week. (Tôi cố gắng chạy bộ ba lần một tuần.)"
+  },
+  {
+    "word": "Musical instrument",
+    "ipa": "/ˌmjuː.zɪ.kəl ˈɪn.strə.mənt/",
+    "type": "phr",
+    "meaning": "Nhạc cụ",
+    "example": "The guitar is a popular musical instrument. (Đàn guitar là một loại nhạc cụ phổ biến.)"
+  },
+  {
+    "word": "Oar",
+    "ipa": "/ɔːr/",
+    "type": "n",
+    "meaning": "Mái chèo",
+    "example": "He used the oar to paddle the boat. (Anh ấy đã dùng mái chèo để chèo thuyền.)"
+  },
+  {
+    "word": "Oil painting",
+    "ipa": "/ˈɔɪl ˌpeɪn.tɪŋ/",
+    "type": "phr",
+    "meaning": "Tranh sơn dầu",
+    "example": "The artist is known for his oil paintings. (Họa sĩ này được biết đến với những bức tranh sơn dầu của ông.)"
+  },
+  {
+    "word": "Outdoor",
+    "ipa": "/ˈaʊtˌdɔːr/",
+    "type": "adj",
+    "meaning": "Ngoài trời",
+    "example": "We love outdoor dining in the summer. (Chúng tôi thích dùng bữa ngoài trời vào mùa hè.)"
+  },
+  {
+    "word": "Paddle",
+    "ipa": "/ˈpæd.əl/",
+    "type": "n/v",
+    "meaning": "Mái chèo / Chèo",
+    "example": "They paddled the canoe across the lake. (Họ đã chèo chiếc xuồng qua hồ.)"
+  },
+  {
+    "word": "Premiere",
+    "ipa": "/prɪˈmɪr/",
+    "type": "n",
+    "meaning": "Buổi ra mắt",
+    "example": "The movie premiere was last night. (Buổi ra mắt bộ phim đã diễn ra tối qua.)"
+  },
+  {
+    "word": "Rake leaves",
+    "ipa": "/ˈreɪk ˈliːvz/",
+    "type": "phr",
+    "meaning": "Cào lá",
+    "example": "It's time to rake leaves in the yard. (Đã đến lúc cào lá trong sân rồi.)"
+  },
+  {
+    "word": "Recreational activity",
+    "ipa": "/ˌrek.riˈeɪ.ʃən.əl ækˈtɪv.ə.t̬i/",
+    "type": "phr",
+    "meaning": "Hoạt động giải trí",
+    "example": "Hiking is a great recreational activity. (Đi bộ đường dài là một hoạt động giải trí tuyệt vời.)"
+  },
+  {
+    "word": "Right",
+    "ipa": "/raɪt/",
+    "type": "n",
+    "meaning": "Quyền / Lẽ phải",
+    "example": "Everyone has the right to free speech. (Mọi người đều có quyền tự do ngôn luận.)"
+  },
+  {
+    "word": "Running time",
+    "ipa": "/ˈrʌn.ɪŋ taɪm/",
+    "type": "phr",
+    "meaning": "Thời lượng",
+    "example": "The film's running time is 90 minutes. (Thời lượng của bộ phim là 90 phút.)"
+  },
+  {
+    "word": "Sail a boat",
+    "ipa": "/ˈseɪl ə ˈboʊt/",
+    "type": "phr",
+    "meaning": "Chèo thuyền",
+    "example": "He learned how to sail a boat. (Anh ấy đã học cách chèo thuyền.)"
+  },
+  {
+    "word": "Slide down",
+    "ipa": "/ˈslaɪd ˈdaʊn/",
+    "type": "phr",
+    "meaning": "Trượt xuống",
+    "example": "The children liked to slide down the hill. (Lũ trẻ đã thích trượt xuống đồi.)"
+  },
+  {
+    "word": "Splash",
+    "ipa": "/splæʃ/",
+    "type": "v",
+    "meaning": "Bắn tung tóe",
+    "example": "The kids splashed water in the pool. (Lũ trẻ đã bắn nước tung tóe trong hồ bơi.)"
+  },
+  {
+    "word": "Sport tournament",
+    "ipa": "/ˈspɔːrt ˌtʊr.nə.mənt/",
+    "type": "phr",
+    "meaning": "Giải đấu thể thao",
+    "example": "Our team won the sport tournament. (Đội của chúng tôi đã thắng giải đấu thể thao.)"
+  },
+  {
+    "word": "Stadium",
+    "ipa": "/ˈsteɪ.di.əm/",
+    "type": "n",
+    "meaning": "Sân vận động",
+    "example": "The football stadium was packed. (Sân vận động bóng đá đã chật kín người.)"
+  },
+  {
+    "word": "Stroll",
+    "ipa": "/stroʊl/",
+    "type": "v",
+    "meaning": "Đi dạo",
+    "example": "They took a stroll along the beach. (Họ đã đi dạo dọc theo bãi biển.)"
+  },
+  {
+    "word": "Stay up",
+    "ipa": "/ˈsteɪ ˈʌp/",
+    "type": "phr",
+    "meaning": "Thức khuya",
+    "example": "I had to stay up late to study. (Tôi đã phải thức khuya để học bài.)"
+  },
+  {
+    "word": "Take a break",
+    "ipa": "/ˈteɪk ə ˈbreɪk/",
+    "type": "phr",
+    "meaning": "Nghỉ ngơi",
+    "example": "Let's take a break for coffee. (Hãy nghỉ một lát để uống cà phê đi.)"
+  },
+  {
+    "word": "Take a walk",
+    "ipa": "/ˈteɪk ə ˈwɑːk/",
+    "type": "phr",
+    "meaning": "Đi dạo",
+    "example": "They take a walk after dinner every night. (Họ đi dạo sau bữa tối mỗi tối.)"
+  },
+  {
+    "word": "Take a photograph",
+    "ipa": "/ˈteɪk ə ˈfoʊ.t̬ə.ɡræf/",
+    "type": "phr",
+    "meaning": "Chụp ảnh",
+    "example": "May I take a photograph of the building? (Tôi có thể chụp ảnh tòa nhà được không?)"
+  },
+  {
+    "word": "Take great pleasure",
+    "ipa": "/ˈteɪk ˈɡreɪt ˈpleʒ.ɚ/",
+    "type": "phr",
+    "meaning": "Thích thú",
+    "example": "He takes great pleasure in his work. (Anh ấy thấy rất thích thú trong công việc của mình.)"
+  },
+  {
+    "word": "Touch up",
+    "ipa": "/ˈtʌtʃ ˈʌp/",
+    "type": "phr",
+    "meaning": "Chỉnh sửa (ảnh)",
+    "example": "I need to touch up this photo. (Tôi cần chỉnh sửa bức ảnh này.)"
+  },
+  {
+    "word": "Vacation package",
+    "ipa": "/veɪˈkeɪ.ʃən ˌpæk.ɪdʒ/",
+    "type": "phr",
+    "meaning": "Gói du lịch",
+    "example": "They booked an all-inclusive vacation package. (Họ đã đặt một gói du lịch bao trọn gói.)"
+  },
+  {
+    "word": "Wait for seats",
+    "ipa": "/ˈweɪt fɔːr ˈsiːts/",
+    "type": "phr",
+    "meaning": "Chờ chỗ ngồi",
+    "example": "We had to wait for seats at the cafe. (Chúng tôi đã phải chờ chỗ ngồi tại quán cà phê.)"
+  },
+  {
+    "word": "Wait in line",
+    "ipa": "/ˈweɪt ɪn ˈlaɪn/",
+    "type": "phr",
+    "meaning": "Xếp hàng",
+    "example": "I don't like waiting in line for tickets. (Tôi không thích xếp hàng chờ mua vé.)"
+  },
+  {
+    "word": "Water the plants",
+    "ipa": "/ˈwɑː.t̬ɚ ðə ˈplænts/",
+    "type": "phr",
+    "meaning": "Tưới cây",
+    "example": "Remember to water the plants while I'm away. (Nhớ tưới cây khi tôi đi vắng nhé.)"
+  },
+  {
+    "word": "Amuse",
+    "ipa": "/əˈmjuːz/",
+    "type": "v",
+    "meaning": "Làm vui vẻ",
+    "example": "The magician amused the crowd. (Nhà ảo thuật đã làm đám đông vui vẻ.)"
+  },
+  {
+    "word": "Artistic",
+    "ipa": "/ɑːrˈtɪs.tɪk/",
+    "type": "adj",
+    "meaning": "Có tính nghệ thuật",
+    "example": "She has a very artistic personality. (Cô ấy có một tính cách rất nghệ thuật.)"
+  },
+  {
+    "word": "Donate",
+    "ipa": "/ˈdoʊ.neɪt/",
+    "type": "v",
+    "meaning": "Quyên góp",
+    "example": "They donated food to the food bank. (Họ đã quyên góp thực phẩm cho ngân hàng thực phẩm.)"
+  },
+  {
+    "word": "Even though",
+    "ipa": "/ˈiː.vən ðoʊ/",
+    "type": "phr",
+    "meaning": "Mặc dù",
+    "example": "Even though it's late, I'm not tired. (Mặc dù đã muộn, tôi vẫn không thấy mệt.)"
+  },
+  {
+    "word": "Exhibit",
+    "ipa": "/ɪɡˈzɪb.ɪt/",
+    "type": "v",
+    "meaning": "Triển lãm",
+    "example": "They will exhibit their latest designs. (Họ sẽ triển lãm những thiết kế mới nhất của mình.)"
+  },
+  {
+    "word": "Exist",
+    "ipa": "/ɪɡˈzɪst/",
+    "type": "v",
+    "meaning": "Tồn tại",
+    "example": "Life may exist on other planets. (Sự sống có thể tồn tại trên các hành tinh khác.)"
+  },
+  {
+    "word": "Free admission",
+    "ipa": "/ˌfriː ədˈmɪʃ.ən/",
+    "type": "phr",
+    "meaning": "Miễn phí vào cửa",
+    "example": "The local zoo offers free admission today. (Vườn thú địa phương miễn phí vào cửa hôm nay.)"
+  },
+  {
+    "word": "Make oneself at home",
+    "ipa": "/ˈmeɪk wʌnˌself æt ˈhoʊm/",
+    "type": "phr",
+    "meaning": "Cứ tự nhiên",
+    "example": "Please come in and make yourself at home. (Mời vào và cứ tự nhiên như ở nhà nhé.)"
+  },
+  {
+    "word": "Municipal",
+    "ipa": "/mjuːˈnɪs.ə.pəl/",
+    "type": "adj",
+    "meaning": "Thuộc thành phố",
+    "example": "The municipal office is in the city center. (Văn phòng thuộc thành phố nằm ở trung tâm thành phố.)"
+  },
+  {
+    "word": "Several",
+    "ipa": "/ˈsev.ɚ.əl/",
+    "type": "adj",
+    "meaning": "Một vài",
+    "example": "I've seen that movie several times. (Tôi đã xem bộ phim đó một vài lần.)"
+  },
+  {
+    "word": "Spectator",
+    "ipa": "/spekˈteɪ.t̬ɚ/",
+    "type": "n",
+    "meaning": "Khán giả",
+    "example": "Thousands of spectators attended the game. (Hàng ngàn khán giả đã tham dự trận đấu.)"
+  },
+  {
+    "word": "Usher",
+    "ipa": "/ˈʌʃ.ɚ/",
+    "type": "n",
+    "meaning": "Người chỉ chỗ",
+    "example": "The usher led us to our row. (Người chỉ chỗ đã dẫn chúng tôi đến hàng ghế của mình.)"
+  },
+  {
+    "word": "Win a contest",
+    "ipa": "/ˈwɪn ə ˈkɑːn.test/",
+    "type": "phr",
+    "meaning": "Thắng cuộc thi",
+    "example": "She worked hard to win a contest. (Cô ấy đã làm việc chăm chỉ để thắng một cuộc thi.)"
+  },
+  {
+    "word": "Admission to",
+    "ipa": "/ədˈmɪʃ.ən tuː/",
+    "type": "phr",
+    "meaning": "Được nhận vào",
+    "example": "He gained admission to the law school. (Anh ấy đã được nhận vào trường luật.)"
+  },
+  {
+    "word": "Contestant",
+    "ipa": "/kənˈtes.tənt/",
+    "type": "n",
+    "meaning": "Thí sinh",
+    "example": "Each contestant had three minutes. (Mỗi thí sinh đã có ba phút.)"
+  },
+  {
+    "word": "Delight",
+    "ipa": "/dɪˈlaɪt/",
+    "type": "n",
+    "meaning": "Sự vui sướng",
+    "example": "To her delight, it was snowing. (Trước sự vui sướng của cô ấy, trời đang đổ tuyết.)"
+  },
+  {
+    "word": "Do one's hair",
+    "ipa": "/ˈduː wʌnz ˈher/",
+    "type": "phr",
+    "meaning": "Làm tóc",
+    "example": "It takes her an hour to do her hair. (Cô ấy mất một tiếng để làm tóc.)"
+  },
+  {
+    "word": "Enjoyable",
+    "ipa": "/ɪnˈdʒɔɪ.ə.bəl/",
+    "type": "adj",
+    "meaning": "Thú vị",
+    "example": "The trip was very enjoyable. (Chuyến đi thật là thú vị.)"
+  },
+  {
+    "word": "Group rate",
+    "ipa": "/ˈɡruːp reɪt/",
+    "type": "phr",
+    "meaning": "Giá nhóm",
+    "example": "We got a special group rate for the hotel. (Chúng tôi đã nhận được một mức giá nhóm đặc biệt cho khách sạn.)"
+  },
+  {
+    "word": "Head for",
+    "ipa": "/ˈhed fɔːr/",
+    "type": "phr",
+    "meaning": "Đi về phía",
+    "example": "They are heading for the mountains. (Họ đang đi về phía những ngọn núi.)"
+  },
+  {
+    "word": "Out of order",
+    "ipa": "/ˌaʊt əv ˈɔːr.dɚ/",
+    "type": "phr",
+    "meaning": "Hỏng",
+    "example": "The vending machine is out of order. (Máy bán hàng tự động bị hỏng rồi.)"
+  },
+  {
+    "word": "Periodical",
+    "ipa": "/ˌpɪr.iˈɑː.dɪ.kəl/",
+    "type": "n",
+    "meaning": "Tạp chí định kỳ",
+    "example": "He writes articles for a science periodical. (Anh ấy viết các bài báo cho một tạp chí khoa học định kỳ.)"
+  },
+  {
+    "word": "Playing field",
+    "ipa": "/ˈpleɪ.ɪŋ fiːld/",
+    "type": "phr",
+    "meaning": "Sân chơi",
+    "example": "The children were running on the playing field. (Lũ trẻ đang chạy trên sân chơi.)"
+  },
+  {
+    "word": "Register for",
+    "ipa": "/ˈredʒ.ə.stɚ fɔːr/",
+    "type": "phr",
+    "meaning": "Đăng ký",
+    "example": "You need to register for the workshop. (Bạn cần phải đăng ký cho buổi hội thảo.)"
+  },
+  {
+    "word": "Show up",
+    "ipa": "/ˈʃoʊ ʌp/",
+    "type": "phr",
+    "meaning": "Xuất hiện",
+    "example": "I hope he shows up on time. (Tôi hy vọng anh ấy xuất hiện đúng giờ.)"
+  },
+  {
+    "word": "Take a tour",
+    "ipa": "/ˈteɪk ə ˈtʊr/",
+    "type": "phr",
+    "meaning": "Đi tham quan",
+    "example": "We took a tour of the winery. (Chúng tôi đã đi tham quan xưởng rượu vang.)"
+  },
+  {
+    "word": "Be in line",
+    "ipa": "/bi ɪn ˈlaɪn/",
+    "type": "phr",
+    "meaning": "Xếp hàng",
+    "example": "We have been in line for 20 minutes. (Chúng tôi đã xếp hàng được 20 phút rồi.)"
+  },
+  {
+    "word": "For a change",
+    "ipa": "/fɔːr ə ˈtʃeɪndʒ/",
+    "type": "phr",
+    "meaning": "Để thay đổi không khí",
+    "example": "Let's eat Italian for a change. (Hãy đi ăn đồ Ý để thay đổi không khí đi.)"
+  },
+  {
+    "word": "Pass the time",
+    "ipa": "/ˈpæs ðə ˈtaɪm/",
+    "type": "phr",
+    "meaning": "Giết thời gian",
+    "example": "I played games to pass the time on the train. (Tôi đã chơi game để giết thời gian trên tàu.)"
+  },
+  {
+    "word": "Pose",
+    "ipa": "/poʊz/",
+    "type": "v",
+    "meaning": "Tạo dáng",
+    "example": "They posed for a group photo. (Họ đã tạo dáng cho một bức ảnh nhóm.)"
+  },
+  {
+    "word": "Stay tuned",
+    "ipa": "/ˈsteɪ ˈtuːnd/",
+    "type": "phr",
+    "meaning": "Tiếp tục theo dõi",
+    "example": "Stay tuned for further updates. (Tiếp tục theo dõi để biết thêm các cập nhật.)"
+  },
+  {
+    "word": "Vacate",
+    "ipa": "/veɪˈkeɪt/",
+    "type": "v",
+    "meaning": "Bỏ trống / Rời khỏi",
+    "example": "The family vacated the house last week. (Gia đình đã rời khỏi ngôi nhà vào tuần trước.)"
+  },
+  {
+    "word": "Appreciative",
+    "ipa": "/əˈpriː.ʃə.tɪv/",
+    "type": "adj",
+    "meaning": "Biết thưởng thức",
+    "example": "She was very appreciative of the help. (Cô ấy đã rất biết ơn vì sự giúp đỡ.)"
+  },
+  {
+    "word": "Casually",
+    "ipa": "/ˈkæʒ.u.ə.li/",
+    "type": "adv",
+    "meaning": "Tình cờ",
+    "example": "He dressed casually for the party. (Anh ấy ăn mặc tình cờ/giản dị cho bữa tiệc.)"
+  },
+  {
+    "word": "Enlightening",
+    "ipa": "/ɪnˈlaɪ.t̬ən.ɪŋ/",
+    "type": "adj",
+    "meaning": "Khai sáng",
+    "example": "It was an enlightening talk about history. (Đó là một buổi trò chuyện khai sáng về lịch sử.)"
+  },
+  {
+    "word": "Enthusiastically",
+    "ipa": "/ɪnˌθuː.ziˈæs.tɪ.kəl.i/",
+    "type": "adv",
+    "meaning": "Nhiệt tình",
+    "example": "The fans cheered enthusiastically. (Người hâm mộ đã cổ vũ nhiệt tình.)"
+  },
+  {
+    "word": "Excellence",
+    "ipa": "/ˈek.səl.əns/",
+    "type": "n",
+    "meaning": "Sự xuất sắc",
+    "example": "Striving for excellence in education. (Phấn đấu cho sự xuất sắc trong giáo dục.)"
+  },
+  {
+    "word": "Excursion",
+    "ipa": "/ɪkˈskɝː.ʃən/",
+    "type": "n",
+    "meaning": "Chuyến tham quan",
+    "example": "We went on an excursion to the mountains. (Chúng tôi đã đi tham quan lên núi.)"
+  },
+  {
+    "word": "Festivity",
+    "ipa": "/fesˈtɪv.ə.t̬i/",
+    "type": "n",
+    "meaning": "Lễ hội",
+    "example": "The whole town joined in the festivities. (Cả thị trấn đã tham gia vào các hoạt động lễ hội.)"
+  },
+  {
+    "word": "Flock",
+    "ipa": "/flɑːk/",
+    "type": "n/v",
+    "meaning": "Đám đông / Tụ tập",
+    "example": "Tourists flocked to the beach. (Khách du lịch đã tụ tập đông đúc đến bãi biển.)"
+  },
+  {
+    "word": "Intriguingly",
+    "ipa": "/ɪnˈtriː.ɡɪŋ.li/",
+    "type": "adv",
+    "meaning": "Thú vị, tò mò",
+    "example": "Intriguingly, no one lived in that house. (Thú vị thay, không ai sống trong ngôi nhà đó cả.)"
+  },
+  {
+    "word": "Leg room",
+    "ipa": "/ˈleɡ ruːm/",
+    "type": "phr",
+    "meaning": "Chỗ để chân",
+    "example": "Economy class doesn't have much leg room. (Hạng phổ thông không có nhiều chỗ để chân.)"
+  },
+  {
+    "word": "Mural",
+    "ipa": "/ˈmjʊr.əl/",
+    "type": "n",
+    "meaning": "Tranh tường",
+    "example": "The mural was painted on the side of the building. (Bức tranh tường được vẽ trên mặt bên của tòa nhà.)"
+  },
+  {
+    "word": "Portrait",
+    "ipa": "/ˈpɔːr.trɪt/",
+    "type": "n",
+    "meaning": "Chân dung",
+    "example": "He painted a portrait of his wife. (Anh ấy đã vẽ một bức chân dung của vợ mình.)"
+  },
+  {
+    "word": "Publication",
+    "ipa": "/ˌpʌb.ləˈkeɪ.ʃən/",
+    "type": "n",
+    "meaning": "Ấn phẩm",
+    "example": "The publication is updated every year. (Ấn phẩm này được cập nhật hàng năm.)"
+  },
+  {
+    "word": "Sculpture",
+    "ipa": "/ˈskʌlp.tʃɚ/",
+    "type": "n",
+    "meaning": "Điêu khắc",
+    "example": "We saw a giant sculpture in the park. (Chúng tôi đã thấy một bức điêu khắc khổng lồ trong công viên.)"
+  },
+  {
+    "word": "Transferable",
+    "ipa": "/trænsˈfɝː.ə.bəl/",
+    "type": "adj",
+    "meaning": "Có thể chuyển nhượng",
+    "example": "These skills are transferable to any job. (Những kỹ năng này có thể chuyển nhượng/áp dụng cho bất kỳ công việc nào.)"
+  },
+  {
+    "word": "Unsanitary",
+    "ipa": "/ʌnˈsæn.ə.ter.i/",
+    "type": "adj",
+    "meaning": "Mất vệ sinh",
+    "example": "Cooking in unsanitary conditions is dangerous. (Nấu ăn trong điều kiện mất vệ sinh rất nguy hiểm.)"
+  },
+  {
+    "word": "Be in the mood for",
+    "ipa": "/bi ɪn ðə ˈmuːd fɔːr/",
+    "type": "phr",
+    "meaning": "Có hứng thú với",
+    "example": "I'm not in the mood for dancing. (Tôi không có hứng thú đi nhảy.)"
+  },
+  {
+    "word": "Botanical garden",
+    "ipa": "/bəˈtæn.ɪ.kəl ˌɡɑːr.dən/",
+    "type": "phr",
+    "meaning": "Vườn bách thảo",
+    "example": "The botanical garden has exotic plants. (Vườn bách thảo có những loại cây lạ.)"
+  },
+  {
+    "word": "Censorship",
+    "ipa": "/ˈsen.sɚ.ʃɪp/",
+    "type": "n",
+    "meaning": "Sự kiểm duyệt",
+    "example": "The movie faced strict censorship. (Bộ phim đã đối mặt với sự kiểm duyệt nghiêm ngặt.)"
+  },
+  {
+    "word": "Have yet to",
+    "ipa": "/ˈhæv jet tuː/",
+    "type": "phr",
+    "meaning": "Vẫn chưa",
+    "example": "I have yet to receive the package. (Tôi vẫn chưa nhận được kiện hàng.)"
+  },
+  {
+    "word": "Intermission",
+    "ipa": "/ˌɪn.t̬ɚˈmɪʃ.ən/",
+    "type": "n",
+    "meaning": "Giờ giải lao",
+    "example": "We bought popcorn during the intermission. (Chúng tôi đã mua bỏng ngô trong giờ giải lao.)"
+  },
+  {
+    "word": "Memoirs",
+    "ipa": "/ˈmem.wɑːrz/",
+    "type": "n",
+    "meaning": "Hồi ký",
+    "example": "He wrote his memoirs at the age of eighty. (Ông ấy đã viết hồi ký của mình ở tuổi tám mươi.)"
+  },
+  {
+    "word": "Must-see",
+    "ipa": "/ˈmʌst siː/",
+    "type": "phr",
+    "meaning": "Đáng xem",
+    "example": "This exhibition is a must-see. (Cuộc triển lãm này thật sự đáng xem.)"
+  },
+  {
+    "word": "Rally",
+    "ipa": "/ˈræl.i/",
+    "type": "n",
+    "meaning": "Đại hội / Tập hợp",
+    "example": "Thousands attended the political rally. (Hàng ngàn người đã tham dự cuộc đại hội chính trị.)"
+  },
+  {
+    "word": "Ridiculous",
+    "ipa": "/rɪˈdɪk.jə.ləs/",
+    "type": "adj",
+    "meaning": "Lố bịch",
+    "example": "The price of that hat is ridiculous. (Giá của chiếc mũ đó thật lố bịch.)"
+  },
+  {
+    "word": "Roam around",
+    "ipa": "/ˈroʊm əˈraʊnd/",
+    "type": "phr",
+    "meaning": "Đi lang thang",
+    "example": "We roamed around the park for hours. (Chúng tôi đi lang thang quanh công viên trong nhiều giờ.)"
+  }
+];
         const tbody = document.getElementById('vocabBody');
         const searchInput = document.getElementById('searchInput');
 
